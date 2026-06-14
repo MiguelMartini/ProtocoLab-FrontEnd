@@ -1,4 +1,3 @@
-import React from 'react'
 import DashBoardFeature from '../features/Dashboard/DashBoardFeature'
 
 function DashBoard() {
