@@ -32,7 +32,7 @@ const tickets = [
 
 function TicketFeature() {
   return (
-    <div className="max-w-6xl mx-auto p-8"> 
+    <div className="max-w-6xl mx-auto pt-8"> 
       <TicketsCard tickets={tickets}/>
     </div>
   )
