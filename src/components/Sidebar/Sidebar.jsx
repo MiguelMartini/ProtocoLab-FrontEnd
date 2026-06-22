@@ -72,7 +72,7 @@ function Sidebar() {
             Colaboradores
           </SidebarItem>
 
-          <SidebarItem to="/departament" icon={Users}>
+          <SidebarItem to="/department" icon={Users}>
             Departamentos
           </SidebarItem>
 
