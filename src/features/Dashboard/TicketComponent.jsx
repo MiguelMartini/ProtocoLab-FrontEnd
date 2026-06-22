@@ -1,7 +1,4 @@
-import TicketsCard from "./TicketsCard";
-import TicketHeader from "./TicketHeader";
-import TicketSearch from "./TicketSearch";
-import TicketFilter from "./TicketFilter";
+import TicketsCard from "../Tickets/TicketsCard"
 
 const tickets = [
   {
@@ -33,15 +30,12 @@ const tickets = [
   },
 ];
 
-function TicketFeature() {
+function TicketComponent() {
   return (
-    <div className="px-20 pt-10 max-w-7xl mx-auto">
-      <TicketHeader />
-      <TicketSearch/>
-      <TicketFilter/>
-      <TicketsCard title={"Chamados"} tickets={tickets} />
+    <div className="max-w-6xl mx-auto pt-8"> 
+      <TicketsCard title={"Chamados recentes"} tickets={tickets}/>
     </div>
-  );
+  )
 }
 
-export default TicketFeature;
+export default TicketComponent

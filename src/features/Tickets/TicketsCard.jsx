@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 import TicketItem from "./TicketItem";
 import { toast } from "sonner";
 
-function TicketsCard({ tickets }) {
+function TicketsCard({ title, tickets }) {
   return (
     <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden">
       <div className="p-5 flex items-center justify-between border-b border-slate-200">
-        <h2 className="font-semibold text-xl">Chamados recentes</h2>
+        <h2 className="font-semibold text-xl">{title}</h2>
 
         <NavLink
           to="/tickets"

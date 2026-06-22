@@ -1,4 +1,4 @@
-import TicketFeature from "../Tickets/TicketFeature";
+import TicketFeature from "./TicketComponent";
 import DashBoardCard from "./DashBoardCard";
 
 function DashBoardFeature() {
