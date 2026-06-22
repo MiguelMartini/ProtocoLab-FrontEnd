@@ -6,6 +6,7 @@ import DashboardLayout from "../features/Dashboard/DashboardLayout";
 import Ticket from "../pages/Ticket";
 import UserSettings from "@/pages/UserSettings";
 import Team from "@/pages/Team";
+import Department from "@/pages/Department";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/tickets",
         element: <Ticket />,
+      },
+      {
+        path: "/department",
+        element: <Department />,
       },
       {
         path: "/team",
