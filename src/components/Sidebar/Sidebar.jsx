@@ -72,8 +72,12 @@ function Sidebar() {
             Colaboradores
           </SidebarItem>
 
-          <SidebarItem to="/team" icon={Users}>
+          <SidebarItem to="/departament" icon={Users}>
             Departamentos
+          </SidebarItem>
+
+          <SidebarItem to="/team" icon={Users}>
+            Equipe
           </SidebarItem>
 
           <SidebarItem to="/settings" icon={Settings}>
