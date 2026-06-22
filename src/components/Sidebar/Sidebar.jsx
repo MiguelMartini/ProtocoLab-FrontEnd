@@ -1,5 +1,4 @@
 import {
-  Plus,
   LayoutGrid,
   Ticket,
   Users,
@@ -13,6 +12,7 @@ import SidebarUser from "./SidebarUser";
 import SidebarItem from "./SidebarItem";
 import SidebarHeader from "./SidebarHeader";
 import { useState } from "react";
+import NewTicketBtn from "../NewTicketBtn";
 
 function Sidebar() {
   const [open, setOpen] = useState(false);
@@ -57,12 +57,7 @@ function Sidebar() {
         </button>
         <SidebarHeader />
 
-        <div className="p-4">
-          <button className="w-full bg-indigo-600 text-white rounded-xl py-3 flex items-center justify-center gap-2 hover:bg-indigo-700">
-            <Plus size={18} />
-            Novo chamado
-          </button>
-        </div>
+        <NewTicketBtn/>
 
         <nav className="flex-1 px-4 space-y-2">
           <SidebarItem to="/dashboard" icon={LayoutGrid}>

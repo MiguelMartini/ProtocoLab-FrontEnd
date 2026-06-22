@@ -1,9 +1,10 @@
-import TicketFeature from '../features/Tickets/TicketFeature'
+import TicketFeature from "@/features/Tickets/TicketFeature"
+
 
 function Ticket() {
   return (
     <div>
-        <h1>Ticekts</h1>
+        <TicketFeature/>
     </div>
   )
 }
