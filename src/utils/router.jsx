@@ -7,6 +7,7 @@ import Ticket from "../pages/Ticket";
 import UserSettings from "@/pages/UserSettings";
 import Team from "@/pages/Team";
 import Department from "@/pages/Department";
+import Collaborators from "@/pages/Collaborators";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/tickets",
         element: <Ticket />,
+      },
+      {
+        path: "/collaborators",
+        element: <Collaborators />,
       },
       {
         path: "/department",
