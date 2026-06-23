@@ -1,12 +1,7 @@
-import { Pencil } from "lucide-react";
 
-export default function UserCard({
-  user,
-
-}) {
-
+function CollaboratorCard({ user }) {
   return (
-    <div className="flex items-center justify-between rounded-2xl border border-gray-200 bg-white px-6 py-4 shadow-sm">
+    <div className="flex items-center justify-between rounded-2xl border border-gray-200 bg-white px-6 py-4 shadow-sm hover:bg-gray-100 cursor-pointer ">
       <div className="flex items-center gap-4">
         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 font-semibold text-indigo-700">
           {user.name.charAt(0)}
@@ -17,23 +12,22 @@ export default function UserCard({
             <h3 className="font-semibold text-gray-900">
               {user.name}
             </h3>
-
-            <span className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-600">
-              Você
-            </span>
           </div>
+
           <p className="text-gray-500">
             {user.email}
           </p>
         </div>
       </div>
 
-      <div className="flex items-center gap-6">
-        <div className="text-right">
-          <p className="text-gray-900">{user.role}</p>
-          <p className="text-gray-500">{user.department}</p>
+      <div className="text-right">
+        <div className="bg-indigo-600 flex justify-center p-1 rounded-md text-sm">
+            <p className=" text-white">{user.departamento}</p>
         </div>
+        <p className="text-gray-900">{user.cargo}</p>
       </div>
     </div>
-  );
+  )
 }
+
+export default CollaboratorCard

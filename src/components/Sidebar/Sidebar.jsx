@@ -68,7 +68,7 @@ function Sidebar() {
             Chamados
           </SidebarItem>
 
-          <SidebarItem to="/colaboradores" icon={UserPlus}>
+          <SidebarItem to="/collaborators" icon={UserPlus}>
             Colaboradores
           </SidebarItem>
 
