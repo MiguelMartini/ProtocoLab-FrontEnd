@@ -1,11 +1,14 @@
+import Comment from "./Comment";
 import CommentInput from "./CommentInput";
+
+import { comments } from "@/mocks/comments";
 
 function TicketComments() {
   return (
     <div className="rounded-2xl border bg-white shadow-sm">
-      <div className="border-b p-5 font-semibold">Comentários (0)</div>
+      <div className="border-b p-5 font-semibold">Comentários ({comments.length})</div>
 
-      <div className="p-6 text-gray-500">Nenhum comentário ainda.</div>
+      <Comment comments={comments}/>
 
       <CommentInput />
     </div>

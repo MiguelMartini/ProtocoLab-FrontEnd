@@ -13,6 +13,7 @@ function SelectedTicket() {
   if (!ticket) {
     return <h1>Ticket não encontrado</h1>;
   }
+
   return (
     <div className="px-20 pt-10 max-w-7xl mx-auto">
       <NavLink
@@ -32,7 +33,7 @@ function SelectedTicket() {
           <TicketComments />
         </div>
         <div className="col-span-4">
-          <TicketSidebar />
+          <TicketSidebar ticket={ticket} />
         </div>
       </div>
     </div>
