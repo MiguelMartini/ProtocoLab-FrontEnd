@@ -8,6 +8,7 @@ import UserSettings from "@/pages/UserSettings";
 import Team from "@/pages/Team";
 import Department from "@/pages/Department";
 import Collaborators from "@/pages/Collaborators";
+import SelectedTicket from "@/features/Tickets/Ticket/SelectedTicket";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/tickets",
         element: <Ticket />,
+      },
+      {
+        path: "/ticket/:id",
+        element: <SelectedTicket />,
       },
       {
         path: "/collaborators",
