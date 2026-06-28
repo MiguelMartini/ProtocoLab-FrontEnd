@@ -9,6 +9,7 @@ import Team from "@/pages/Team";
 import Department from "@/pages/Department";
 import Collaborators from "@/pages/Collaborators";
 import SelectedTicket from "@/features/Tickets/Ticket/SelectedTicket";
+import StoreCollaborator from "@/features/Collaborators/CRUD/StoreCollaborator/StoreCollaborator";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/collaborators",
         element: <Collaborators />,
+      },
+      {
+        path: "/collaborators/store",
+        element: <StoreCollaborator />,
       },
       {
         path: "/department",
