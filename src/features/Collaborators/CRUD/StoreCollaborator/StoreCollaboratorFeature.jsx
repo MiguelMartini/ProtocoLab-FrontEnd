@@ -1,6 +1,6 @@
 import { PencilRuler, Plus } from "lucide-react";
 import { useState } from "react";
-import Select from "../Components/Select";
+import Select from "../../Components/Select";
 
 import { gerarSenha } from "../../../../utils/generatePassword";
 

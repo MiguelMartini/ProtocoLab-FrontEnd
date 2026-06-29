@@ -1,6 +1,8 @@
+import { useState } from "react";
 import CollaboratorCard from "./CollaboratorCard"
 import CollaboratorSearch from "./CollaboratorSearch"
 import CollaboratorsHeader from "./CollaboratorsHeader"
+import CollaboratorModal from "./Components/CollaboratorModal";
 
 const collaborators = [
   {
@@ -27,17 +29,35 @@ const collaborators = [
 ]
 
 function CollaboratorsFeature() {
+  const [selectedUser, setSelectedUser] = useState(null);
+
+  function handleOpenModal(user) {
+    setSelectedUser(user);
+  }
+
+  function handleCloseModal() {
+    setSelectedUser(null);
+  }
+
   return (
     <div className="px-20 pt-10 max-w-7xl mx-auto">
         <CollaboratorsHeader/>
         <CollaboratorSearch/>
+
         <div className="mt-6 space-y-4">
           {collaborators.map((collaborator) => (
             <CollaboratorCard 
               key={collaborator.id} 
-              user={collaborator}/>
+              user={collaborator}
+              onClick={() => handleOpenModal(collaborator)}
+              />  
           ))}
         </div>
+        <CollaboratorModal
+        user={selectedUser}
+        isOpen={!!selectedUser}
+        onClose={handleCloseModal}
+      />
     </div>
   )
 }
