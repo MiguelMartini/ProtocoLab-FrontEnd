@@ -10,6 +10,7 @@ import Department from "@/pages/Department";
 import Collaborators from "@/pages/Collaborators";
 import SelectedTicket from "@/features/Tickets/Ticket/SelectedTicket";
 import StoreCollaborator from "@/features/Collaborators/CRUD/StoreCollaborator/StoreCollaborator";
+import TicketStoreFeature from "@/features/Tickets/TicketStore/TicketStoreFeature";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/ticket/:id",
         element: <SelectedTicket />,
+      },
+      {
+        path: "/ticket/store",
+        element: <TicketStoreFeature />,
       },
       {
         path: "/collaborators",
