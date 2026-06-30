@@ -1,4 +1,43 @@
 {
+  "loginPage": {
+  "headerMsg": "Internal tickets, organized end to end.",
+  "email": "Corporate email",
+  "emailPh": "email@company.com",
+
+  "collaborator": "Collaborator",
+  "collaboratorNamePh": "Full name",
+
+  "pass": "Password",
+  "passPh": "Enter your password",
+
+  "loginBtn": "Sign In",
+  "account": "Don't have an account?",
+  "enterprise": "Register your company"
+},
+"registerPage": {
+  "headerMsg": "Internal tickets, organized end to end.",
+  "email": "Corporate email",
+  "emailPh": "email@company.com",
+
+  "enterpriseCnjp": "Business ID (CNPJ)",
+  "enterpriseCnjpPh": "Enter the company's CNPJ",
+
+  "enterpriseName": "Company name",
+  "enterpriseNamePh": "Enter the company name",
+
+  "collaborator": "Collaborator",
+  "collaboratorNamePh": "Full name",
+
+  "pass": "Password",
+  "passPh": "Enter your password",
+
+  "confirmPass": "Confirm password",
+  "confirmPassPh": "Confirm your password",
+
+  "registerBtn": "Register Company",
+  "account": "Already have an account?",
+  "enter": "Sign In"
+},
   "backBtn":{"backBtn": "Back"},
   "deleteBtn":{
     "cancelBtn": "Cancel",

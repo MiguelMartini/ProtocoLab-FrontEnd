@@ -1,4 +1,43 @@
 {
+  "loginPage": {
+  "headerMsg": "Tickets internos, organizados de principio a fin.",
+  "email": "Correo corporativo",
+  "emailPh": "correo@empresa.com",
+
+  "collaborator": "Colaborador",
+  "collaboratorNamePh": "Nombre completo",
+
+  "pass": "Contraseña",
+  "passPh": "Ingresa tu contraseña",
+
+  "loginBtn": "Iniciar sesión",
+  "account": "¿Aún no tienes una cuenta?",
+  "enterprise": "Registrar empresa"
+},
+"registerPage": {
+  "headerMsg": "Tickets internos, organizados de principio a fin.",
+  "email": "Correo corporativo",
+  "emailPh": "correo@empresa.com",
+
+  "enterpriseCnjp": "CNPJ",
+  "enterpriseCnjpPh": "Ingresa el CNPJ de la empresa",
+
+  "enterpriseName": "Nombre de la empresa",
+  "enterpriseNamePh": "Ingresa el nombre de la empresa",
+
+  "collaborator": "Colaborador",
+  "collaboratorNamePh": "Nombre completo",
+
+  "pass": "Contraseña",
+  "passPh": "Ingresa tu contraseña",
+
+  "confirmPass": "Confirmar contraseña",
+  "confirmPassPh": "Confirma tu contraseña",
+
+  "registerBtn": "Registrar empresa",
+  "account": "¿Ya tienes una cuenta?",
+  "enter": "Iniciar sesión"
+},
   "backBtn":{"backBtn": "Volver"},
   "deleteBtn":{
     "cancelBtn": "Cancelar",
