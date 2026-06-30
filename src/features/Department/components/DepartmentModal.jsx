@@ -2,7 +2,7 @@ import DeleteBtn from "@/components/DeleteBtn";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-function DepartmentModal({ user, isOpen, onClose }) {
+function DepartmentModal({ user, isOpen, onClose, onDelete, onUpdate }) {
   const { t } = useTranslation();
   const [form, setForm] = useState({
     name: "",
@@ -24,17 +24,29 @@ function DepartmentModal({ user, isOpen, onClose }) {
     });
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  async function handleSubmit(e) {
+  e.preventDefault();
 
-    console.log(form);
+  try {
+    await onUpdate(user.id, {
+      name: form.name,
+      description: form.description,
+    });
 
     onClose();
+  } catch (err) {
+    console.error(err);
   }
+}
 
-  function handleDelete() {
-    console.log("Deletando departamento");
+ async function handleDelete() {
+  try {
+    await onDelete(user.id);
+    onClose();
+  } catch (err) {
+    console.error(err);
   }
+}
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/40">
       <div className="w-[500px] rounded-xl bg-white p-6">

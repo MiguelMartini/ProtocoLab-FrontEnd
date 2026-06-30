@@ -1,4 +1,3 @@
-import React from "react";
 
 function AuthInput({ label, error, className = "", ...props }) {
   return (

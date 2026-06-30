@@ -1,6 +1,9 @@
+import { useAuth } from "@/hooks/useAuth";
 import { LogOut, ShieldCheck } from "lucide-react";
 
 function SidebarUser() {
+  const { user } = useAuth();
+
   return (
      <div className="border-t border-gray-200 p-4">
       <div className="flex items-center justify-between">
@@ -10,11 +13,11 @@ function SidebarUser() {
           </div>
 
           <div>
-            <p className="font-medium">User</p>
+            <p className="font-medium">{user?.name}</p>
 
             <div className="flex items-center gap-1 text-indigo-500 text-sm">
               <ShieldCheck size={14} />
-              <span>Administrador</span>
+              <span>{user?.role}</span>
             </div>
           </div>
         </div>

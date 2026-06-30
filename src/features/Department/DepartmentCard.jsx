@@ -7,6 +7,8 @@ import { useTranslation } from "react-i18next";
 function DepartmentCard({
   departments,
   onAdd,
+  onDelete,
+  onUpdate,
   newDepartment,
   newDescription,
   setNewDepartment,
@@ -50,6 +52,8 @@ function DepartmentCard({
         user={selectedDepartment}
         isOpen={!!selectedDepartment}
         onClose={handleCloseModal}
+        onDelete={onDelete}
+        onUpdate={onUpdate}
       />
     </div>
   );

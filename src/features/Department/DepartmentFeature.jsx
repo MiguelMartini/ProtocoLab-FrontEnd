@@ -1,35 +1,71 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DepartmentCard from "./DepartmentCard";
 import DepartmentHeader from "./DepartmentHeader";
+import { createDepartment, getDepartments } from "@/api/department.api";
+import { deleteDepartment, updateDepartment } from "@/api/department.api";
 
 function DepartmentFeature() {
-  const [departments, setDepartments] = useState([
-    {
-      name: "TI",
-      description: "Tecnologia da Informação",
-    },
-  ]);
+  const [departments, setDepartments] = useState([]);
 
   const [newDepartment, setNewDepartment] = useState("");
   const [newDescription, setNewDescription] = useState("");
 
-  function handleAddDepartment() {
-    if (!newDepartment.trim() || !newDescription.trim()) return;
+  useEffect(() => {
+    async function loadDepartments() {
+      try {
+        const data = await getDepartments();
+        setDepartments(data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
 
-    setDepartments((prev) => [
-      ...prev,
-      {
+    loadDepartments();
+  }, []);
+
+  async function handleAddDepartment() {
+    if (!newDepartment.trim() || !newDescription.trim()) {
+      return;
+    }
+
+    try {
+      const department = await createDepartment({
         name: newDepartment,
         description: newDescription,
-      },
-    ]);
+      });
 
-    setNewDepartment("");
-    setNewDescription("");
+      setDepartments((prev) => [...prev, department]);
+
+      setNewDepartment("");
+      setNewDescription("");
+    } catch (error) {
+      console.error(error);
+    }
   }
 
-  function handleRemoveDepartment(index) {
-    setDepartments((prev) => prev.filter((_, i) => i !== index));
+  async function handleDeleteDepartment(id) {
+    try {
+      await deleteDepartment(id);
+
+      setDepartments((prev) =>
+        prev.filter((department) => department.id !== id),
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  async function handleUpdateDepartment(id, data) {
+    try {
+      await updateDepartment(id, data);
+
+      setDepartments((prev) =>
+        prev.map((department) =>
+          department.id === id ? { ...department, ...data } : department,
+        ),
+      );
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (
@@ -37,7 +73,8 @@ function DepartmentFeature() {
       <DepartmentHeader />
       <DepartmentCard
         departments={departments}
-        onDelete={handleRemoveDepartment}
+        onDelete={handleDeleteDepartment}
+        onUpdate={handleUpdateDepartment}
         onAdd={handleAddDepartment}
         newDepartment={newDepartment}
         newDescription={newDescription}

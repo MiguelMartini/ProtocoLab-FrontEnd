@@ -1,8 +1,10 @@
+import { useAuth } from "@/hooks/useAuth";
 import { UserRound } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 function UserForm() {
   const { t } = useTranslation();
+  const { user } = useAuth();
   return (
     <div className="w-full rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
       <div className="mb-8 flex items-center gap-3">
@@ -18,6 +20,7 @@ function UserForm() {
 
           <input
             type="text"
+            value={user.name}
             className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-700 shadow-sm outline-none transition focus:border-indigo-500 focus:bg-white"
           />
         </div>
@@ -29,6 +32,7 @@ function UserForm() {
 
           <input
             type="email"
+            value={user.email}
             className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-700 shadow-sm outline-none transition focus:border-indigo-500 focus:bg-white"
           />
         </div>
@@ -40,6 +44,7 @@ function UserForm() {
 
           <input
             type="text"
+            value={user.role}
             placeholder={t("settings.rolePlaceholder")}
             className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-700 shadow-sm outline-none transition focus:border-indigo-500 focus:bg-white"
           />
