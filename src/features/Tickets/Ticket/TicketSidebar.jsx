@@ -16,7 +16,7 @@ function TicketSidebar({ ticket }) {
 
     loadDepartments();
   }, []);
-  
+
   const statusOptions = [
     { id: 1, nome: "Aberto" },
     { id: 2, nome: "Progresso" },
@@ -28,6 +28,11 @@ function TicketSidebar({ ticket }) {
     { id: 2, nome: "Média" },
     { id: 3, nome: "Baixa" },
   ];
+  const priorityMap = {
+    HIGH: "Alta",
+    NORMAL: "Média",
+    LOW: "Baixa",
+  };
 
   return (
     <div className="space-y-5">
@@ -40,19 +45,19 @@ function TicketSidebar({ ticket }) {
 
         <TicketSelect
           label={t("selectedTicket.priority")}
-          value={ticket.priority}
+          value={priorityMap[ticket.priority]}
           options={priorityOptions}
         />
 
-        <TicketSelect
+        {/* <TicketSelect
           label={t("selectedTicket.responsible")}
           value={ticket.responsible}
           options={[{ id: 1, nome: ticket.responsible }]}
-        />
+        /> */}
 
         <TicketSelect
           label={t("selectedTicket.department")}
-          value={ticket.departmentId}
+          value={ticket.department.name}
           options={departments.map((dep) => ({ nome: dep.name }))}
         />
       </div>

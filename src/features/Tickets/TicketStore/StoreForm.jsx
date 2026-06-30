@@ -1,26 +1,85 @@
+import { getDepartments } from "@/api/department.api";
+import { postTicket } from "@/api/tickets.api";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 
 function StoreForm() {
   const { t } = useTranslation();
-  const departments = [
-    { id: 1, name: "TI" },
-    { id: 2, name: "Financeiro" },
-    { id: 3, name: "RH" },
-    { id: 4, name: "Infraestrutura" },
-  ];
+  const navigate = useNavigate();
+
+  const [departments, setDepartments] = useState([]);
+
+  const [form, setForm] = useState({
+    title: "",
+    description: "",
+    departmentId: "",
+    priority: "NORMAL",
+    status: "IN_PROGRESS",
+  });
+
+  useEffect(() => {
+    async function loadDepartments() {
+      try {
+        const data = await getDepartments();
+        setDepartments(data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    loadDepartments();
+  }, []);
+
+  function handleChange(e) {
+    const { name, value } = e.target;
+
+    setForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  }
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    try {
+      const newTicket = await postTicket({
+        ...form,
+        departmentId: Number(form.departmentId),
+      });
+
+      toast.success(t("tickets.created"));
+
+      setForm({
+        title: "",
+        description: "",
+        departmentId: "",
+        priority: "NORMAL",
+      });
+
+      navigate("/tickets")
+    } catch (error) {
+      console.error(error);
+      toast.error(t("tickets.error"));
+    }
+  }
 
   return (
     <div className="w-full rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-      <form className="space-y-6">
+      <form className="space-y-6" onSubmit={handleSubmit}>
         <div>
           <label className="mb-2 block text-lg font-medium text-gray-900">
             {t("tickets.title")}
           </label>
 
           <input
+            name="title"
+            value={form.title}
+            onChange={handleChange}
             type="text"
             placeholder={t("tickets.titlePh")}
-            className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-700 shadow-sm outline-none transition focus:border-indigo-500 focus:bg-white"
+            className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3"
           />
         </div>
 
@@ -30,9 +89,12 @@ function StoreForm() {
           </label>
 
           <textarea
+            name="description"
+            value={form.description}
+            onChange={handleChange}
             rows={5}
             placeholder={t("tickets.descPh")}
-            className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-700 shadow-sm outline-none transition focus:border-indigo-500 focus:bg-white"
+            className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50 px-4 py-3"
           />
         </div>
 
@@ -43,12 +105,12 @@ function StoreForm() {
             </label>
 
             <select
-              defaultValue=""
-              className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-700 shadow-sm outline-none transition focus:border-indigo-500 focus:bg-white"
+              name="departmentId"
+              value={form.departmentId}
+              onChange={handleChange}
+              className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3"
             >
-              <option value="" disabled>
-                {t("tickets.departmentPh")}
-              </option>
+              <option value="">{t("tickets.departmentPh")}</option>
 
               {departments.map((department) => (
                 <option key={department.id} value={department.id}>
@@ -57,14 +119,17 @@ function StoreForm() {
               ))}
             </select>
           </div>
+
           <div className="flex-1">
             <label className="mb-2 block text-lg font-medium text-gray-900">
               {t("tickets.priority")}
             </label>
 
             <select
-              defaultValue="NORMAL"
-              className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-700 shadow-sm outline-none transition focus:border-indigo-500 focus:bg-white"
+              name="priority"
+              value={form.priority}
+              onChange={handleChange}
+              className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3"
             >
               <option value="HIGH">{t("tickets.option1")}</option>
               <option value="NORMAL">{t("tickets.option2")}</option>
@@ -76,9 +141,9 @@ function StoreForm() {
         <div className="flex justify-end pt-2">
           <button
             type="submit"
-            className="rounded-xl bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-md transition hover:bg-indigo-700"
+            className="rounded-xl bg-indigo-600 px-6 py-3 text-white"
           >
-           {t("tickets.addBtn")}
+            {t("tickets.addBtn")}
           </button>
         </div>
       </form>

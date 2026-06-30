@@ -2,7 +2,6 @@ import api from "./axios";
 
 export const getComments = async (id) => {
   const response = await api.get(`tickets/${id}/comments`);
-  console.log(response.data);
 
   return response.data;
 };

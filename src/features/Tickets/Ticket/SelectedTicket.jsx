@@ -37,7 +37,6 @@ function SelectedTicket() {
     return <h1>{t("selectedTicket.notFound")}</h1>;
   }
 
-  console.log(comments)
 
   return (
     <div className="px-20 pt-10 max-w-7xl mx-auto">
