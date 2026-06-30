@@ -1,4 +1,8 @@
 {
+  "deleteBtn":{
+    "cancelBtn": "Cancelar",
+    "delBtn": "Excluir"
+  },
   "dashboard": {
     "title": "Dashboard",
     "greeting": "Olá,",
@@ -13,6 +17,28 @@
         "description": "Chamados abertos"
       }
     }
+  },
+  "department": {
+    "sidebar": "Departamentos",
+    "headerMsg": "Departamentos da organização.",
+    "namePlaceHolder": "Nome do departamento",
+    "descPlaceHolder": "Descrição do departamento",
+    "addBtn": "Adicionar",
+
+    "editHeader": "Editar departamento",
+    "editName": "Nome do departamento",
+    "editNamePh": "Nome",
+    "editDesc": "Descrição",
+    "editDescPh": "Descrição do departamento",
+    "cancelBtn": "Cancelar",
+    "saveBtn": "Salvar",
+
+    "delHeader":"Deseja excluir este departamento?",
+    "delMsg": "Esta ação não poderá ser desfeita."
+  },
+  "team": {
+    "sidebar": "Equipe",
+    "headerMsg": "Membros da sua organização."
   },
   "settings": {
     "sidebar": "Configurações",

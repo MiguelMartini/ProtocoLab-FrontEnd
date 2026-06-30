@@ -1,4 +1,8 @@
 {
+  "deleteBtn":{
+    "cancelBtn": "Cancel",
+    "delBtn": "Delete"
+  }, 
   "dashboard": {
     "title": "Dashboard",
     "greeting": "Hello,",
@@ -13,6 +17,28 @@
         "description": "Open tickets"
       }
     }
+  },
+  "department": {
+  "sidebar": "Departments",
+  "headerMsg": "Organization departments.",
+  "namePlaceHolder": "Department name",
+  "descPlaceHolder": "Department description",
+  "addBtn": "Add",
+
+  "editHeader": "Edit department",
+  "editName": "Department name",
+  "editNamePh": "Name",
+  "editDesc": "Description",
+  "editDescPh": "Department description",
+  "cancelBtn": "Cancel",
+  "saveBtn": "Save",
+
+  "delHeader": "Do you want to delete this department?",
+  "delMsg": "This action cannot be undone."
+},
+  "team": {
+    "sidebar": "Team",
+    "headerMsg": "Members of your organization."
   },
   "settings": {
     "sidebar": "Settings",

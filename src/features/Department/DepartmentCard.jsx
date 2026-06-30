@@ -2,6 +2,7 @@ import DepartmentItem from "./DepartmentItem";
 import DepartmentForm from "./DepartmentForm";
 import { useState } from "react";
 import DepartmentModal from "./components/DepartmentModal";
+import { useTranslation } from "react-i18next";
 
 function DepartmentCard({
   departments,
@@ -11,6 +12,7 @@ function DepartmentCard({
   setNewDepartment,
   setNewDescription,
 }) {
+  const { t } = useTranslation();
   const [selectedDepartment, setSelectedDepartment] = useState(null);
 
   function handleOpenModal(department) {
@@ -24,7 +26,7 @@ function DepartmentCard({
   return (
     <div className="w-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
       <h2 className="mb-6 text-xl font-semibold text-slate-900">
-        Departamentos
+        {t("department.sidebar")}
       </h2>
 
       <div className="space-y-4">

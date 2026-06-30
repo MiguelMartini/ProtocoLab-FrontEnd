@@ -1,4 +1,8 @@
 {
+  "deleteBtn":{
+    "cancelBtn": "Cancelar",
+    "delBtn": "Borrar"
+  }, 
   "dashboard": {
     "title": "Panel",
     "greeting": "Hola,",
@@ -13,6 +17,28 @@
         "description": "Tickets abiertos"
       }
     }
+  },
+  "department": {
+  "sidebar": "Departamentos",
+  "headerMsg": "Departamentos de la organización.",
+  "namePlaceHolder": "Nombre del departamento",
+  "descPlaceHolder": "Descripción del departamento",
+  "addBtn": "Agregar",
+
+  "editHeader": "Editar departamento",
+  "editName": "Nombre del departamento",
+  "editNamePh": "Nombre",
+  "editDesc": "Descripción",
+  "editDescPh": "Descripción del departamento",
+  "cancelBtn": "Cancelar",
+  "saveBtn": "Guardar",
+
+  "delHeader": "¿Desea eliminar este departamento?",
+  "delMsg": "Esta acción no se podrá deshacer."
+},
+  "team": {
+    "sidebar": "Equipo",
+    "headerMsg": "Miembros de su organización."
   },
   "settings": {
     "sidebar": "Configuración",

@@ -76,11 +76,11 @@ function Sidebar() {
           </SidebarItem>
 
           <SidebarItem to="/department" icon={Users}>
-            Departamentos
+            {t("department.sidebar")}
           </SidebarItem>
 
           <SidebarItem to="/team" icon={Users}>
-            Equipe
+            {t("team.sidebar")}
           </SidebarItem>
 
           <SidebarItem to="/settings" icon={Settings}>
