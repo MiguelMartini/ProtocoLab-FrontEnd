@@ -1,166 +1,173 @@
 {
-  "loginPage":{
-    "headerMsg": "Chamados internos, organizados de ponta a ponta.",
-    "email": "E-mail corporativo",
-    "emailPh": "email@corporativo.com",
+	"loginPage": {
+		"headerMsg": "Chamados internos, organizados de ponta a ponta.",
+		"email": "E-mail corporativo",
+		"emailPh": "email@corporativo.com",
 
-    "collaborator": "Colaborador",
-    "collaboratorNamePh": "Nome completo",
+		"collaborator": "Colaborador",
+		"collaboratorNamePh": "Nome completo",
 
-    "pass": "Senha",
-    "passPh": "Digite sua senha",
+		"pass": "Senha",
+		"passPh": "Digite sua senha",
 
-    "loginBtn": "Entrar",
-    "account": "Ainda não tem conta?",
-    "enterprise": "Cadastre sua empresa"
-  },
-  "registerPage":{
-    "headerMsg": "Chamados internos, organizados de ponta a ponta.",
-    "email": "E-mail corporativo",
-    "emailPh": "email@corporativo.com",
+		"loginBtn": "Entrar",
+		"account": "Ainda não tem conta?",
+		"enterprise": "Cadastre sua empresa"
+	},
+	"registerPage": {
+		"headerMsg": "Chamados internos, organizados de ponta a ponta.",
+		"email": "E-mail corporativo",
+		"emailPh": "email@corporativo.com",
 
-    "enterpriseCnjp": "CNPJ",
-    "enterpriseCnjpPh": "Digite o CNPJ da empresa",
+		"enterpriseCnjp": "CNPJ",
+		"enterpriseCnjpPh": "Digite o CNPJ da empresa",
 
-    "enterpriseName": "Nome da empresa",
-    "enterpriseNamePh": "Digite o nome da empresa",
+		"enterpriseName": "Nome da empresa",
+		"enterpriseNamePh": "Digite o nome da empresa",
 
-    "collaborator": "Colaborador",
-    "collaboratorNamePh": "Nome completo",
+		"collaborator": "Colaborador",
+		"collaboratorNamePh": "Nome completo",
 
-    "pass": "Senha",
-    "passPh": "Digite sua senha",
+		"pass": "Senha",
+		"passPh": "Digite sua senha",
 
-    "confirmPass": "Confirmar senha",
-    "confirmPassPh": "Confirme sua senha",
+		"confirmPass": "Confirmar senha",
+		"confirmPassPh": "Confirme sua senha",
 
-    "registerBtn": "Registrar Empresa",
-    "account": "Já possui Login?",
-    "enter": "Entrar"
-  },
-  "backBtn":{"backBtn": "Voltar"},
-  "deleteBtn":{
-    "cancelBtn": "Cancelar",
-    "delBtn": "Excluir"
-  },
-  "dashboard": {
-    "sidebar": "Visão geral",
-    "title": "Dashboard",
-    "greeting": "Olá,",
-    "subtitle": "Acompanhe seus chamados e atividades recentes.",
-    "cards": {
-      "tickets": {
-        "title": "Chamados",
-        "description": "Total de chamados"
-      },
-      "open": {
-        "title": "Abertos",
-        "description": "Chamados abertos"
-      }
-    },
-    "recentTickets": "Chamados recentes"
-  },
-  "selectedTicket":{
-    "notFound": "Ticket não encontrado",
-    "comments": "Comentários: ",
+		"registerBtn": "Registrar Empresa",
+		"account": "Já possui Login?",
+		"enter": "Entrar"
+	},
+	"backBtn": { "backBtn": "Voltar" },
+	"deleteBtn": {
+		"cancelBtn": "Cancelar",
+		"delBtn": "Excluir"
+	},
+	"dashboard": {
+		"sidebar": "Visão geral",
+		"title": "Dashboard",
+		"greeting": "Olá,",
+		"subtitle": "Acompanhe seus chamados e atividades recentes.",
+		"cards": {
+			"tickets": {
+				"title": "Chamados",
+				"description": "Total de chamados"
+			},
+			"open": {
+				"title": "Abertos",
+				"description": "Chamados abertos"
+			},
+			"progress": {
+				"title": "Em Andamento",
+				"description": "Chamados em andamento"
+			},
+			"closed": {
+				"title": "Fechados",
+				"description": "Chamados fechados"
+			}
+		},
+		"recentTickets": "Chamados recentes"
+	},
+	"selectedTicket": {
+		"notFound": "Ticket não encontrado",
+		"comments": "Comentários: ",
 
-    "inputComment": "Escreva um comentário...",
-    "emptyComment": "Nenhum comentário ainda.",
+		"inputComment": "Escreva um comentário...",
+		"emptyComment": "Nenhum comentário ainda.",
 
-    "status": "Status",
-    "priority": "Prioridade",
-    "responsible": "Responsável",
-    "department": "Departamento",
+		"status": "Status",
+		"priority": "Prioridade",
+		"responsible": "Responsável",
+		"department": "Departamento",
 
-    "openned": "Aberto por"
-  },
-  "tickets":{
-    "sidebar": "Chamados",
-    "headerMsg": "Todos os chamados da sua organização.",
-    "newTicketBtn": "Novo chamado",
+		"openned": "Aberto por"
+	},
+	"tickets": {
+		"sidebar": "Chamados",
+		"headerMsg": "Todos os chamados da sua organização.",
+		"newTicketBtn": "Novo chamado",
 
-    "searchMsg": "Buscar por título ou descrição...",
+		"searchMsg": "Buscar por título ou descrição...",
 
-    "filterPriority": "Prioridade: ",
-    
-    "ticketsBtn":"Ver todos",
+		"filterPriority": "Prioridade: ",
 
-    "newTicketHeader": "Criar Chamado",
-    "newTicketMsg": "Crie um novo chamado.",
+		"ticketsBtn": "Ver todos",
 
-    "title": "Título",
-    "titlePh": "Ex.: Computador não liga",
-    "desc": "Descrição",
-    "descPh": "Descreva detalhadamente o problema...",
+		"newTicketHeader": "Criar Chamado",
+		"newTicketMsg": "Crie um novo chamado.",
 
-    "department": "Departamento", 
-    "departmentPh": "Selecione o departamento",
+		"title": "Título",
+		"titlePh": "Ex.: Computador não liga",
+		"desc": "Descrição",
+		"descPh": "Descreva detalhadamente o problema...",
 
-    "priority": "Prioridade",
-    "prioritySel": "Selecione a prioridade",
+		"department": "Departamento",
+		"departmentPh": "Selecione o departamento",
 
-    "option1": "Alta",
-    "option2": "Média",
-    "option3": "Baixa",
+		"priority": "Prioridade",
+		"prioritySel": "Selecione a prioridade",
 
-    "addBtn": "Abrir Ticket"
-  },
-  "collaborator": {
-    "sidebar": "Colaboradores",
-    "headerMsg": "Gerencie todos os colaboradores da sua organização.",
-    "newCollaboratorBtn": "Novo colaborador",
-    "searchMsg": "Buscar por colaborador...",
-    "searchBtn": "Buscar",
+		"option1": "Alta",
+		"option2": "Média",
+		"option3": "Baixa",
 
-    "newHeader": "Novo Colaborador",
-    "newName": "Nome:",
-    "newNamePh": "Nome do colaborador",
+		"addBtn": "Abrir Ticket"
+	},
+	"collaborator": {
+		"sidebar": "Colaboradores",
+		"headerMsg": "Gerencie todos os colaboradores da sua organização.",
+		"newCollaboratorBtn": "Novo colaborador",
+		"searchMsg": "Buscar por colaborador...",
+		"searchBtn": "Buscar",
 
-    "newEmail": "E-mail:",
-    "newEmailPh": "Email colaborador",
+		"newHeader": "Novo Colaborador",
+		"newName": "Nome:",
+		"newNamePh": "Nome do colaborador",
 
-    "generatePass": "Gerar senha:",
-    "generatePassPh": "gerar senha",
-    "generatePassBtn": "Gerar",
+		"newEmail": "E-mail:",
+		"newEmailPh": "Email colaborador",
 
-    "role": "Cargo:",
-    "rolePlaceholder": "Digite o cargo",
+		"generatePass": "Gerar senha:",
+		"generatePassPh": "gerar senha",
+		"generatePassBtn": "Gerar",
 
-    "departmentSel": "Selecionar departamento",
+		"role": "Cargo:",
+		"rolePlaceholder": "Digite o cargo",
 
-    "addBtn": "Adicionar"
-  },
-  "department": {
-    "sidebar": "Departamentos",
-    "headerMsg": "Departamentos da organização.",
-    "namePlaceHolder": "Nome do departamento",
-    "descPlaceHolder": "Descrição do departamento",
-    "addBtn": "Adicionar",
+		"departmentSel": "Selecionar departamento",
 
-    "editHeader": "Editar departamento",
-    "editName": "Nome do departamento",
-    "editNamePh": "Nome",
-    "editDesc": "Descrição",
-    "editDescPh": "Descrição do departamento",
-    "cancelBtn": "Cancelar",
-    "saveBtn": "Salvar",
+		"addBtn": "Adicionar"
+	},
+	"department": {
+		"sidebar": "Departamentos",
+		"headerMsg": "Departamentos da organização.",
+		"namePlaceHolder": "Nome do departamento",
+		"descPlaceHolder": "Descrição do departamento",
+		"addBtn": "Adicionar",
 
-    "delHeader":"Deseja excluir este departamento?",
-    "delMsg": "Esta ação não poderá ser desfeita."
-  },
-  "team": {
-    "sidebar": "Equipe",
-    "headerMsg": "Membros da sua organização."
-  },
-  "settings": {
-    "sidebar": "Configurações",
-    "headerMsg": "Gerencie seu perfil",
-    "title": "Meu perfil",
-    "name": "Nome",
-    "email": "E-mail",
-    "role": "Cargo",
-    "rolePlaceholder": "Ex.: Analista de TI",
-    "saveProfile": "Salvar Perfil"
-  }
-  
+		"editHeader": "Editar departamento",
+		"editName": "Nome do departamento",
+		"editNamePh": "Nome",
+		"editDesc": "Descrição",
+		"editDescPh": "Descrição do departamento",
+		"cancelBtn": "Cancelar",
+		"saveBtn": "Salvar",
+
+		"delHeader": "Deseja excluir este departamento?",
+		"delMsg": "Esta ação não poderá ser desfeita."
+	},
+	"team": {
+		"sidebar": "Equipe",
+		"headerMsg": "Membros da sua organização."
+	},
+	"settings": {
+		"sidebar": "Configurações",
+		"headerMsg": "Gerencie seu perfil",
+		"title": "Meu perfil",
+		"name": "Nome",
+		"email": "E-mail",
+		"role": "Cargo",
+		"rolePlaceholder": "Ex.: Analista de TI",
+		"saveProfile": "Salvar Perfil"
+	}
 }

@@ -1,165 +1,173 @@
 {
-  "loginPage": {
-  "headerMsg": "Internal tickets, organized end to end.",
-  "email": "Corporate email",
-  "emailPh": "email@company.com",
+	"loginPage": {
+		"headerMsg": "Internal tickets, organized end to end.",
+		"email": "Corporate email",
+		"emailPh": "email@company.com",
 
-  "collaborator": "Collaborator",
-  "collaboratorNamePh": "Full name",
+		"collaborator": "Collaborator",
+		"collaboratorNamePh": "Full name",
 
-  "pass": "Password",
-  "passPh": "Enter your password",
+		"pass": "Password",
+		"passPh": "Enter your password",
 
-  "loginBtn": "Sign In",
-  "account": "Don't have an account?",
-  "enterprise": "Register your company"
-},
-"registerPage": {
-  "headerMsg": "Internal tickets, organized end to end.",
-  "email": "Corporate email",
-  "emailPh": "email@company.com",
+		"loginBtn": "Sign In",
+		"account": "Don't have an account?",
+		"enterprise": "Register your company"
+	},
+	"registerPage": {
+		"headerMsg": "Internal tickets, organized end to end.",
+		"email": "Corporate email",
+		"emailPh": "email@company.com",
 
-  "enterpriseCnjp": "Business ID (CNPJ)",
-  "enterpriseCnjpPh": "Enter the company's CNPJ",
+		"enterpriseCnjp": "Business ID (CNPJ)",
+		"enterpriseCnjpPh": "Enter the company's CNPJ",
 
-  "enterpriseName": "Company name",
-  "enterpriseNamePh": "Enter the company name",
+		"enterpriseName": "Company name",
+		"enterpriseNamePh": "Enter the company name",
 
-  "collaborator": "Collaborator",
-  "collaboratorNamePh": "Full name",
+		"collaborator": "Collaborator",
+		"collaboratorNamePh": "Full name",
 
-  "pass": "Password",
-  "passPh": "Enter your password",
+		"pass": "Password",
+		"passPh": "Enter your password",
 
-  "confirmPass": "Confirm password",
-  "confirmPassPh": "Confirm your password",
+		"confirmPass": "Confirm password",
+		"confirmPassPh": "Confirm your password",
 
-  "registerBtn": "Register Company",
-  "account": "Already have an account?",
-  "enter": "Sign In"
-},
-  "backBtn":{"backBtn": "Back"},
-  "deleteBtn":{
-    "cancelBtn": "Cancel",
-    "delBtn": "Delete"
-  }, 
-  "dashboard": {
-  "sidebar": "Overview",
-  "title": "Dashboard",
-  "greeting": "Hello,",
-  "subtitle": "Track your tickets and recent activities.",
-  "cards": {
-    "tickets": {
-      "title": "Tickets",
-      "description": "Total tickets"
-    },
-    "open": {
-      "title": "Open",
-      "description": "Open tickets"
-    }
-  },
-  "recentTickets": "Recent tickets"
-},
-"selectedTicket": {
-  "notFound": "Ticket not found",
-  "comments": "Comments:",
+		"registerBtn": "Register Company",
+		"account": "Already have an account?",
+		"enter": "Sign In"
+	},
+	"backBtn": { "backBtn": "Back" },
+	"deleteBtn": {
+		"cancelBtn": "Cancel",
+		"delBtn": "Delete"
+	},
+	"dashboard": {
+		"sidebar": "Overview",
+		"title": "Dashboard",
+		"greeting": "Hello,",
+		"subtitle": "Track your tickets and recent activities.",
+		"cards": {
+			"tickets": {
+				"title": "Tickets",
+				"description": "Total tickets"
+			},
+			"open": {
+				"title": "Open",
+				"description": "Open tickets"
+			},
+			"progress": {
+				"title": "In progress",
+				"description": "Tickets in progress"
+			},
+			"closed": {
+				"title": "Closed",
+				"description": "Closed tickets"
+			}
+		},
+		"recentTickets": "Recent tickets"
+	},
+	"selectedTicket": {
+		"notFound": "Ticket not found",
+		"comments": "Comments:",
 
-  "inputComment": "Write a comment...",
-  "emptyComment": "No comments yet.",
+		"inputComment": "Write a comment...",
+		"emptyComment": "No comments yet.",
 
-  "status": "Status",
-  "priority": "Priority",
-  "responsible": "Responsible",
-  "department": "Department",
+		"status": "Status",
+		"priority": "Priority",
+		"responsible": "Responsible",
+		"department": "Department",
 
-  "openned": "Opened by"
-},
-"tickets": {
-  "sidebar": "Tickets",
-  "headerMsg": "All tickets in your organization.",
-  "newTicketBtn": "New Ticket",
+		"openned": "Opened by"
+	},
+	"tickets": {
+		"sidebar": "Tickets",
+		"headerMsg": "All tickets in your organization.",
+		"newTicketBtn": "New Ticket",
 
-  "searchMsg": "Search by title or description...",
+		"searchMsg": "Search by title or description...",
 
-  "filterPriority": "Priority: ",
+		"filterPriority": "Priority: ",
 
-  "ticketsBtn": "View all",
+		"ticketsBtn": "View all",
 
-  "newTicketHeader": "Create Ticket",
-  "newTicketMsg": "Create a new ticket.",
+		"newTicketHeader": "Create Ticket",
+		"newTicketMsg": "Create a new ticket.",
 
-  "title": "Title",
-  "titlePh": "E.g.: Computer won't turn on",
-  "desc": "Description",
-  "descPh": "Describe the issue in detail...",
+		"title": "Title",
+		"titlePh": "E.g.: Computer won't turn on",
+		"desc": "Description",
+		"descPh": "Describe the issue in detail...",
 
-  "department": "Department",
-  "departmentPh": "Select a department",
+		"department": "Department",
+		"departmentPh": "Select a department",
 
-  "priority": "Priority",
-  "prioritySel": "Select a priority",
+		"priority": "Priority",
+		"prioritySel": "Select a priority",
 
-  "option1": "High",
-  "option2": "Medium",
-  "option3": "Low",
+		"option1": "High",
+		"option2": "Medium",
+		"option3": "Low",
 
-  "addBtn": "Open Ticket"
-},
-"collaborator": {
-  "sidebar": "Collaborators",
-  "headerMsg": "Manage all collaborators in your organization.",
-  "searchMsg": "Search for a collaborator...",
-  "searchBtn": "Search",
-  "newCollaboratorBtn": "New Collaborator",
+		"addBtn": "Open Ticket"
+	},
+	"collaborator": {
+		"sidebar": "Collaborators",
+		"headerMsg": "Manage all collaborators in your organization.",
+		"searchMsg": "Search for a collaborator...",
+		"searchBtn": "Search",
+		"newCollaboratorBtn": "New Collaborator",
 
-  "newHeader": "New Collaborator",
-  "newName": "Name:",
-  "newNamePh": "Collaborator name",
+		"newHeader": "New Collaborator",
+		"newName": "Name:",
+		"newNamePh": "Collaborator name",
 
-  "newEmail": "Email:",
-  "newEmailPh": "Collaborator email",
+		"newEmail": "Email:",
+		"newEmailPh": "Collaborator email",
 
-  "generatePass": "Generate password:",
-  "generatePassPh": "generate password",
-  "generatePassBtn": "Generate",
+		"generatePass": "Generate password:",
+		"generatePassPh": "generate password",
+		"generatePassBtn": "Generate",
 
-  "role": "Role:",
-  "rolePlaceholder": "Enter the role",
+		"role": "Role:",
+		"rolePlaceholder": "Enter the role",
 
-  "departmentSel": "Select department",
+		"departmentSel": "Select department",
 
-  "addBtn": "Add"
-},
-  "department": {
-  "sidebar": "Departments",
-  "headerMsg": "Organization departments.",
-  "namePlaceHolder": "Department name",
-  "descPlaceHolder": "Department description",
-  "addBtn": "Add",
+		"addBtn": "Add"
+	},
+	"department": {
+		"sidebar": "Departments",
+		"headerMsg": "Organization departments.",
+		"namePlaceHolder": "Department name",
+		"descPlaceHolder": "Department description",
+		"addBtn": "Add",
 
-  "editHeader": "Edit department",
-  "editName": "Department name",
-  "editNamePh": "Name",
-  "editDesc": "Description",
-  "editDescPh": "Department description",
-  "cancelBtn": "Cancel",
-  "saveBtn": "Save",
+		"editHeader": "Edit department",
+		"editName": "Department name",
+		"editNamePh": "Name",
+		"editDesc": "Description",
+		"editDescPh": "Department description",
+		"cancelBtn": "Cancel",
+		"saveBtn": "Save",
 
-  "delHeader": "Do you want to delete this department?",
-  "delMsg": "This action cannot be undone."
-},
-  "team": {
-    "sidebar": "Team",
-    "headerMsg": "Members of your organization."
-  },
-  "settings": {
-    "sidebar": "Settings",
-    "headerMsg": "Manage your profile",
-    "title": "My Profile",
-    "name": "Name",
-    "email": "Email",
-    "role": "Role",
-    "rolePlaceholder": "E.g.: IT Analyst",
-    "saveProfile": "Save Profile"
-  }
+		"delHeader": "Do you want to delete this department?",
+		"delMsg": "This action cannot be undone."
+	},
+	"team": {
+		"sidebar": "Team",
+		"headerMsg": "Members of your organization."
+	},
+	"settings": {
+		"sidebar": "Settings",
+		"headerMsg": "Manage your profile",
+		"title": "My Profile",
+		"name": "Name",
+		"email": "Email",
+		"role": "Role",
+		"rolePlaceholder": "E.g.: IT Analyst",
+		"saveProfile": "Save Profile"
+	}
 }
