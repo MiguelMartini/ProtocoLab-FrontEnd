@@ -1,11 +1,28 @@
 import TicketFeature from "./TicketComponent";
+import TicketChart from "./TicketChart";
 import DashBoardCard from "./DashBoardCard";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "@/hooks/useAuth";
+import { ticketStatusData, ticketPriorityData,
+  ticketDepartmentData,
+  ticketMonthlyData,
+} from "@/mocks/ticketChart";
+
+//Para fazer a navegação do gráfico de barra.
+import { useNavigate } from "react-router-dom";
 
 function DashBoardFeature() {
   const { t } = useTranslation();
   const { user } = useAuth();
+
+  const navigate = useNavigate();
+
+  const handleSliceClick = (entry) => {
+    console.log(entry);
+  
+    // Exemplo de redirect
+    navigate(`/tickets?priority=${entry.priority}`);
+  };
 
   return (
     <div className="px-20 pt-10 max-w-7xl mx-auto">
@@ -38,6 +55,32 @@ function DashBoardFeature() {
           total={3}
           description={t("dashboard.cards.open.description")}
         />
+      </div>
+
+      <div className="mt-8 space-y-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+          <TicketChart
+            title="Chamados por status"
+            data={ticketStatusData}
+          />
+          <TicketChart
+            title="Chamados por prioridade"
+            data={ticketPriorityData}
+            onSliceClick={handleSliceClick}
+          />
+        </div>
+
+        {/* <TicketChart
+          title="Chamados por departamento"
+          data={ticketDepartmentData}
+          type="bar"
+        />
+
+        <TicketChart
+          title="Chamados por mês"
+          data={ticketMonthlyData}
+          type="bar"
+        /> */}
       </div>
 
       <TicketFeature />
