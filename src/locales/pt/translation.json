@@ -1,4 +1,5 @@
 {
+  "backBtn":{"backBtn": "Voltar"},
   "deleteBtn":{
     "cancelBtn": "Cancelar",
     "delBtn": "Excluir"
@@ -17,6 +18,76 @@
         "description": "Chamados abertos"
       }
     }
+  },
+  "selectedTicket":{
+    "notFound": "Ticket não encontrado",
+    "comments": "Comentários: ",
+
+    "inputComment": "Escreva um comentário...",
+    "emptyComment": "Nenhum comentário ainda.",
+
+    "status": "Status",
+    "priority": "Prioridade",
+    "responsible": "Responsável",
+    "department": "Departamento",
+
+    "openned": "Aberto por"
+  },
+  "tickets":{
+    "sidebar": "Chamados",
+    "headerMsg": "Todos os chamados da sua organização.",
+    "newTicketBtn": "Novo chamado",
+
+    "searchMsg": "Buscar por título ou descrição...",
+
+    "filterPriority": "Prioridade: ",
+    
+    "ticketsBtn":"Ver todos",
+
+    "newTicketHeader": "Criar Chamado",
+    "newTicketMsg": "Crie um novo chamado.",
+
+    "title": "Título",
+    "titlePh": "Ex.: Computador não liga",
+    "desc": "Descrição",
+    "descPh": "Descreva detalhadamente o problema...",
+
+    "department": "Departamento", 
+    "departmentPh": "Selecione o departamento",
+
+    "priority": "Prioridade",
+    "prioritySel": "Selecione a prioridade",
+
+    "option1": "Alta",
+    "option2": "Média",
+    "option3": "Baixa",
+
+    "addBtn": "Abrir Ticket"
+  },
+  "collaborator": {
+    "sidebar": "Colaboradores",
+    "headerMsg": "Gerencie todos os colaboradores da sua organização.",
+    "newCollaboratorBtn": "Novo colaborador",
+    "searchMsg": "Buscar por colaborador...",
+    "searchBtn": "Buscar",
+
+    "newHeader": "Novo Colaborador",
+    "newName": "Nome:",
+    "newNamePh": "Nome do colaborador",
+
+    "newEmail": "E-mail:",
+    "newEmailPh": "Email colaborador",
+
+    "generatePass": "Gerar senha:",
+    "generatePassPh": "gerar senha",
+    "generatePassBtn": "Gerar",
+
+    "role": "Cargo:",
+    "rolePlaceholder": "Digite o cargo",
+
+    "departmentSel": "Selecionar departamento",
+
+    "addBtn": "Adicionar"
   },
   "department": {
     "sidebar": "Departamentos",

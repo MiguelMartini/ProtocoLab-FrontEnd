@@ -2,8 +2,10 @@ import { ArrowRight } from "lucide-react";
 import { NavLink, useNavigate } from "react-router-dom";
 import TicketItem from "./TicketItem";
 import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
 
 function TicketsCard({ title, tickets }) {
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   return (
@@ -15,7 +17,7 @@ function TicketsCard({ title, tickets }) {
           to="/tickets"
           className="flex items-center gap-2 p-2 hover:bg-slate-100 rounded-2xl text-indigo-600 hover:text-indigo-700"
         >
-          Ver todos
+          {t("tickets.ticketsBtn")}
           <ArrowRight size={16} />
         </NavLink>
       </div>

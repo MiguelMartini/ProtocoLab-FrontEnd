@@ -1,7 +1,9 @@
 import { Plus } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 
 function NewTicketBtn() {
+  const { t } = useTranslation();
   return (
     <div className="p-4">
       <NavLink
@@ -11,7 +13,7 @@ function NewTicketBtn() {
         }
       >
         <Plus size={18} />
-        Novo chamado
+        {t("tickets.newTicketBtn")}
       </NavLink>
     </div>
   );

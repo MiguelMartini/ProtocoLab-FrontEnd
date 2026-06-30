@@ -1,4 +1,5 @@
 {
+  "backBtn":{"backBtn": "Volver"},
   "deleteBtn":{
     "cancelBtn": "Cancelar",
     "delBtn": "Borrar"
@@ -17,7 +18,77 @@
         "description": "Tickets abiertos"
       }
     }
-  },
+},
+"selectedTicket": {
+  "notFound": "Ticket no encontrado",
+  "comments": "Comentarios:",
+
+  "inputComment": "Escribe un comentario...",
+  "emptyComment": "Aún no hay comentarios.",
+
+  "status": "Estado",
+  "priority": "Prioridad",
+  "responsible": "Responsable",
+  "department": "Departamento",
+
+  "openned": "Abierto por"
+},
+"tickets": {
+  "sidebar": "Tickets",
+  "headerMsg": "Todos los tickets de tu organización.",
+  "newTicketBtn": "Nuevo ticket",
+
+  "searchMsg": "Buscar por título o descripción...",
+
+  "filterPriority": "Prioridad: ",
+
+  "ticketsBtn": "Ver todos",
+
+  "newTicketHeader": "Crear ticket",
+  "newTicketMsg": "Crea un nuevo ticket.",
+
+  "title": "Título",
+  "titlePh": "Ej.: La computadora no enciende",
+  "desc": "Descripción",
+  "descPh": "Describe el problema detalladamente...",
+
+  "department": "Departamento",
+  "departmentPh": "Selecciona un departamento",
+
+  "priority": "Prioridad",
+  "prioritySel": "Selecciona una prioridad",
+
+  "option1": "Alta",
+  "option2": "Media",
+  "option3": "Baja",
+
+  "addBtn": "Abrir ticket"
+},
+"collaborator": {
+  "sidebar": "Colaboradores",
+  "headerMsg": "Administra todos los colaboradores de tu organización.",
+  "searchMsg": "Buscar colaborador...",
+  "searchBtn": "Buscar",
+  "newCollaboratorBtn": "Nuevo colaborador",
+
+  "newHeader": "Nuevo colaborador",
+  "newName": "Nombre:",
+  "newNamePh": "Nombre del colaborador",
+
+  "newEmail": "Correo electrónico:",
+  "newEmailPh": "Correo del colaborador",
+
+  "generatePass": "Generar contraseña:",
+  "generatePassPh": "generar contraseña",
+  "generatePassBtn": "Generar",
+
+  "role": "Cargo:",
+  "rolePlaceholder": "Ingrese el cargo",
+
+  "departmentSel": "Seleccionar departamento",
+
+  "addBtn": "Agregar"
+},
   "department": {
   "sidebar": "Departamentos",
   "headerMsg": "Departamentos de la organización.",

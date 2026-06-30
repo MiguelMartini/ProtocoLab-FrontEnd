@@ -1,4 +1,5 @@
 {
+  "backBtn":{"backBtn": "Back"},
   "deleteBtn":{
     "cancelBtn": "Cancel",
     "delBtn": "Delete"
@@ -17,7 +18,77 @@
         "description": "Open tickets"
       }
     }
-  },
+},
+"selectedTicket": {
+  "notFound": "Ticket not found",
+  "comments": "Comments:",
+
+  "inputComment": "Write a comment...",
+  "emptyComment": "No comments yet.",
+
+  "status": "Status",
+  "priority": "Priority",
+  "responsible": "Responsible",
+  "department": "Department",
+
+  "openned": "Opened by"
+},
+"tickets": {
+  "sidebar": "Tickets",
+  "headerMsg": "All tickets in your organization.",
+  "newTicketBtn": "New Ticket",
+
+  "searchMsg": "Search by title or description...",
+
+  "filterPriority": "Priority: ",
+
+  "ticketsBtn": "View all",
+
+  "newTicketHeader": "Create Ticket",
+  "newTicketMsg": "Create a new ticket.",
+
+  "title": "Title",
+  "titlePh": "E.g.: Computer won't turn on",
+  "desc": "Description",
+  "descPh": "Describe the issue in detail...",
+
+  "department": "Department",
+  "departmentPh": "Select a department",
+
+  "priority": "Priority",
+  "prioritySel": "Select a priority",
+
+  "option1": "High",
+  "option2": "Medium",
+  "option3": "Low",
+
+  "addBtn": "Open Ticket"
+},
+"collaborator": {
+  "sidebar": "Collaborators",
+  "headerMsg": "Manage all collaborators in your organization.",
+  "searchMsg": "Search for a collaborator...",
+  "searchBtn": "Search",
+  "newCollaboratorBtn": "New Collaborator",
+
+  "newHeader": "New Collaborator",
+  "newName": "Name:",
+  "newNamePh": "Collaborator name",
+
+  "newEmail": "Email:",
+  "newEmailPh": "Collaborator email",
+
+  "generatePass": "Generate password:",
+  "generatePassPh": "generate password",
+  "generatePassBtn": "Generate",
+
+  "role": "Role:",
+  "rolePlaceholder": "Enter the role",
+
+  "departmentSel": "Select department",
+
+  "addBtn": "Add"
+},
   "department": {
   "sidebar": "Departments",
   "headerMsg": "Organization departments.",

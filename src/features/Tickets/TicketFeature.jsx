@@ -3,15 +3,17 @@ import TicketHeader from "./TicketHeader";
 import TicketSearch from "./TicketSearch";
 import TicketFilter from "./TicketFilter";
 import { tickets } from "@/mocks/tickets";
+import { useTranslation } from "react-i18next";
 
 
 function TicketFeature() {
+    const { t } = useTranslation();
   return (
     <div className="px-20 pt-10 max-w-7xl mx-auto">
       <TicketHeader />
       <TicketSearch/>
       <TicketFilter/>
-      <TicketsCard title={"Chamados"} tickets={tickets} />
+      <TicketsCard title={t("tickets.sidebar")} tickets={tickets} />
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import { Search } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function TicketSearch() {
+  const { t } = useTranslation();
   const [status, setStatus] = useState("Todos");
 
   const filters = ["Todos", "Aberto", "Em andamento", "Resolvido", "Fechado"];
@@ -16,7 +18,7 @@ function TicketSearch() {
 
         <input
           type="text"
-          placeholder="Buscar por título ou descrição..."
+          placeholder={t("tickets.searchMsg")}
           className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-11 pr-4 outline-none transition focus:border-blue-500 focus:bg-white"
         />
       </div>

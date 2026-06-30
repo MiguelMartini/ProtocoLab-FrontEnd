@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 function Comment({ comments }) {
+  const { t } = useTranslation();
   return (
     <div>
       {comments.length > 0 ? (
@@ -19,7 +22,7 @@ function Comment({ comments }) {
         ))
       ) : (
         <div className="text-center p-6">
-          <p className="text-gray-500">Nenhum comentário ainda.</p>
+          <p className="text-gray-500">{t("selectedTicket.emptyComment")}</p>
         </div>
       )}
     </div>

@@ -68,11 +68,11 @@ function Sidebar() {
           </SidebarItem>
 
           <SidebarItem to="/tickets" icon={Ticket}>
-            Chamados
+            {t("tickets.sidebar")}
           </SidebarItem>
 
           <SidebarItem to="/collaborators" icon={UserPlus}>
-            Colaboradores
+            {t("collaborator.sidebar")}
           </SidebarItem>
 
           <SidebarItem to="/department" icon={Users}>

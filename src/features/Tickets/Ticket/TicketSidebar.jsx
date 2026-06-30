@@ -1,7 +1,9 @@
 import TicketSelect from "./TicketSelect";
 import TicketInfo from "./TicketInfo";
+import { useTranslation } from "react-i18next";
 
 function TicketSidebar({ ticket }) {
+  const { t } = useTranslation();
     const statusOptions = [
     { id: 1, nome: "Aberto" },
     { id: 2, nome: "Progresso" },
@@ -19,19 +21,19 @@ function TicketSidebar({ ticket }) {
       <div className="rounded-2xl border bg-white p-5 shadow-sm">
 
         <TicketSelect
-          label="Status"
+          label={t("selectedTicket.status")}
           value={ticket.status}
           options={statusOptions}
         />
 
         <TicketSelect
-          label="Prioridade"
+          label={t("selectedTicket.priority")}
           value={ticket.priority}
           options={priorityOptions}
         />
 
         <TicketSelect
-          label="Responsável"
+          label={t("selectedTicket.responsible")}
           value={ticket.responsible}
           options={[
             { id: 1, nome: ticket.responsible }
@@ -39,7 +41,7 @@ function TicketSidebar({ ticket }) {
         />
 
         <TicketSelect
-          label="Departamento"
+          label={t("selectedTicket.department")}
           value={ticket.department}
           options={[
             { id: 1, nome: ticket.department }
