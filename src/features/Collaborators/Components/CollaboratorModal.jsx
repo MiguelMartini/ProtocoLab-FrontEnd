@@ -85,7 +85,7 @@ function CollaboratorModal({ user, isOpen, onClose }) {
             />
           </div>
           <div className="flex justify-between">
-            <DeleteBtn onDelete={() => handleDelete()} />
+            <DeleteBtn msg={"Deseja excluir este colaborador?"} alertMsg={"Esta ação não poderá ser desfeita."} onDelete={() => handleDelete()} />
             <div className="flex justify-end gap-3">
               <button
                 type="button"
