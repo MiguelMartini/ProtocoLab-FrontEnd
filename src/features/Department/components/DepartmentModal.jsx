@@ -72,7 +72,7 @@ function DepartmentModal({ user, isOpen, onClose }) {
           </div>
 
           <div className="flex justify-between">
-            <DeleteBtn onDelete={handleDelete} />
+            <DeleteBtn msg={"Deseja excluir este departamento?"} alertMsg={"Esta ação não poderá ser desfeita."} onDelete={handleDelete} />
 
             <div className="flex gap-3">
               <button

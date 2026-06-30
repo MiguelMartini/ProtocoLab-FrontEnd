@@ -2,24 +2,24 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Button } from './ui/button'
 import { Trash2 } from 'lucide-react'
 
-function DeleteBtn({ onDelete }) {
+function DeleteBtn({ msg, alertMsg,onDelete }) {
    return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
         <Button variant="destructive" size='lg' className={"cursor-pointer"}>
           <Trash2 className="w-4 h-4 mr-2" />
-          Excluir
+          Deletar
         </Button>
       </AlertDialogTrigger>
 
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>
-            Deseja excluir este colaborador?
+            {msg}
           </AlertDialogTitle>
 
           <AlertDialogDescription>
-            Esta ação não poderá ser desfeita.
+            {alertMsg}
           </AlertDialogDescription>
         </AlertDialogHeader>
 
