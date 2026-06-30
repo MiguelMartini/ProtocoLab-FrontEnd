@@ -13,8 +13,11 @@ import SidebarItem from "./SidebarItem";
 import SidebarHeader from "./SidebarHeader";
 import { useState } from "react";
 import NewTicketBtn from "../NewTicketBtn";
+import { useTranslation } from "react-i18next";
 
 function Sidebar() {
+  const { t } = useTranslation();
+
   const [open, setOpen] = useState(false);
 
   return (
@@ -81,7 +84,7 @@ function Sidebar() {
           </SidebarItem>
 
           <SidebarItem to="/settings" icon={Settings}>
-            Configurações
+            {t("settings.sidebar")}
           </SidebarItem>
         </nav>
 

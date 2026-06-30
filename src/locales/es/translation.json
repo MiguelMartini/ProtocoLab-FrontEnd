@@ -1,0 +1,27 @@
+{
+  "dashboard": {
+    "title": "Panel",
+    "greeting": "Hola,",
+    "subtitle": "Sigue tus tickets y actividades recientes.",
+    "cards": {
+      "tickets": {
+        "title": "Tickets",
+        "description": "Total de tickets"
+      },
+      "open": {
+        "title": "Abiertos",
+        "description": "Tickets abiertos"
+      }
+    }
+  },
+  "settings": {
+    "sidebar": "Configuración",
+    "headerMsg": "Administra tu perfil",
+    "title": "Mi perfil",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "role": "Cargo",
+    "rolePlaceholder": "Ej.: Analista de TI",
+    "saveProfile": "Guardar perfil"
+  }
+}

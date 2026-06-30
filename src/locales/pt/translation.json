@@ -1,0 +1,28 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "greeting": "Olá,",
+    "subtitle": "Acompanhe seus chamados e atividades recentes.",
+    "cards": {
+      "tickets": {
+        "title": "Chamados",
+        "description": "Total de chamados"
+      },
+      "open": {
+        "title": "Abertos",
+        "description": "Chamados abertos"
+      }
+    }
+  },
+  "settings": {
+    "sidebar": "Configurações",
+    "headerMsg": "Gerencie seu perfil",
+    "title": "Meu perfil",
+    "name": "Nome",
+    "email": "E-mail",
+    "role": "Cargo",
+    "rolePlaceholder": "Ex.: Analista de TI",
+    "saveProfile": "Salvar Perfil"
+  }
+  
+}

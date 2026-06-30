@@ -1,0 +1,27 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "greeting": "Hello,",
+    "subtitle": "Track your tickets and recent activities.",
+    "cards": {
+      "tickets": {
+        "title": "Tickets",
+        "description": "Total tickets"
+      },
+      "open": {
+        "title": "Open",
+        "description": "Open tickets"
+      }
+    }
+  },
+  "settings": {
+    "sidebar": "Settings",
+    "headerMsg": "Manage your profile",
+    "title": "My Profile",
+    "name": "Name",
+    "email": "Email",
+    "role": "Role",
+    "rolePlaceholder": "E.g.: IT Analyst",
+    "saveProfile": "Save Profile"
+  }
+}
