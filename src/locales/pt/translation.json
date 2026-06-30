@@ -1,4 +1,43 @@
 {
+  "loginPage":{
+    "headerMsg": "Chamados internos, organizados de ponta a ponta.",
+    "email": "E-mail corporativo",
+    "emailPh": "email@corporativo.com",
+
+    "collaborator": "Colaborador",
+    "collaboratorNamePh": "Nome completo",
+
+    "pass": "Senha",
+    "passPh": "Digite sua senha",
+
+    "loginBtn": "Entrar",
+    "account": "Ainda não tem conta?",
+    "enterprise": "Cadastre sua empresa"
+  },
+  "registerPage":{
+    "headerMsg": "Chamados internos, organizados de ponta a ponta.",
+    "email": "E-mail corporativo",
+    "emailPh": "email@corporativo.com",
+
+    "enterpriseCnjp": "CNPJ",
+    "enterpriseCnjpPh": "Digite o CNPJ da empresa",
+
+    "enterpriseName": "Nome da empresa",
+    "enterpriseNamePh": "Digite o nome da empresa",
+
+    "collaborator": "Colaborador",
+    "collaboratorNamePh": "Nome completo",
+
+    "pass": "Senha",
+    "passPh": "Digite sua senha",
+
+    "confirmPass": "Confirmar senha",
+    "confirmPassPh": "Confirme sua senha",
+
+    "registerBtn": "Registrar Empresa",
+    "account": "Já possui Login?",
+    "enter": "Entrar"
+  },
   "backBtn":{"backBtn": "Voltar"},
   "deleteBtn":{
     "cancelBtn": "Cancelar",
