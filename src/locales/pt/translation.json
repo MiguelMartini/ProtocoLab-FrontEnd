@@ -1,0 +1,127 @@
+{
+  "backBtn":{"backBtn": "Voltar"},
+  "deleteBtn":{
+    "cancelBtn": "Cancelar",
+    "delBtn": "Excluir"
+  },
+  "dashboard": {
+    "sidebar": "Visão geral",
+    "title": "Dashboard",
+    "greeting": "Olá,",
+    "subtitle": "Acompanhe seus chamados e atividades recentes.",
+    "cards": {
+      "tickets": {
+        "title": "Chamados",
+        "description": "Total de chamados"
+      },
+      "open": {
+        "title": "Abertos",
+        "description": "Chamados abertos"
+      }
+    },
+    "recentTickets": "Chamados recentes"
+  },
+  "selectedTicket":{
+    "notFound": "Ticket não encontrado",
+    "comments": "Comentários: ",
+
+    "inputComment": "Escreva um comentário...",
+    "emptyComment": "Nenhum comentário ainda.",
+
+    "status": "Status",
+    "priority": "Prioridade",
+    "responsible": "Responsável",
+    "department": "Departamento",
+
+    "openned": "Aberto por"
+  },
+  "tickets":{
+    "sidebar": "Chamados",
+    "headerMsg": "Todos os chamados da sua organização.",
+    "newTicketBtn": "Novo chamado",
+
+    "searchMsg": "Buscar por título ou descrição...",
+
+    "filterPriority": "Prioridade: ",
+    
+    "ticketsBtn":"Ver todos",
+
+    "newTicketHeader": "Criar Chamado",
+    "newTicketMsg": "Crie um novo chamado.",
+
+    "title": "Título",
+    "titlePh": "Ex.: Computador não liga",
+    "desc": "Descrição",
+    "descPh": "Descreva detalhadamente o problema...",
+
+    "department": "Departamento", 
+    "departmentPh": "Selecione o departamento",
+
+    "priority": "Prioridade",
+    "prioritySel": "Selecione a prioridade",
+
+    "option1": "Alta",
+    "option2": "Média",
+    "option3": "Baixa",
+
+    "addBtn": "Abrir Ticket"
+  },
+  "collaborator": {
+    "sidebar": "Colaboradores",
+    "headerMsg": "Gerencie todos os colaboradores da sua organização.",
+    "newCollaboratorBtn": "Novo colaborador",
+    "searchMsg": "Buscar por colaborador...",
+    "searchBtn": "Buscar",
+
+    "newHeader": "Novo Colaborador",
+    "newName": "Nome:",
+    "newNamePh": "Nome do colaborador",
+
+    "newEmail": "E-mail:",
+    "newEmailPh": "Email colaborador",
+
+    "generatePass": "Gerar senha:",
+    "generatePassPh": "gerar senha",
+    "generatePassBtn": "Gerar",
+
+    "role": "Cargo:",
+    "rolePlaceholder": "Digite o cargo",
+
+    "departmentSel": "Selecionar departamento",
+
+    "addBtn": "Adicionar"
+  },
+  "department": {
+    "sidebar": "Departamentos",
+    "headerMsg": "Departamentos da organização.",
+    "namePlaceHolder": "Nome do departamento",
+    "descPlaceHolder": "Descrição do departamento",
+    "addBtn": "Adicionar",
+
+    "editHeader": "Editar departamento",
+    "editName": "Nome do departamento",
+    "editNamePh": "Nome",
+    "editDesc": "Descrição",
+    "editDescPh": "Descrição do departamento",
+    "cancelBtn": "Cancelar",
+    "saveBtn": "Salvar",
+
+    "delHeader":"Deseja excluir este departamento?",
+    "delMsg": "Esta ação não poderá ser desfeita."
+  },
+  "team": {
+    "sidebar": "Equipe",
+    "headerMsg": "Membros da sua organização."
+  },
+  "settings": {
+    "sidebar": "Configurações",
+    "headerMsg": "Gerencie seu perfil",
+    "title": "Meu perfil",
+    "name": "Nome",
+    "email": "E-mail",
+    "role": "Cargo",
+    "rolePlaceholder": "Ex.: Analista de TI",
+    "saveProfile": "Salvar Perfil"
+  }
+  
+}

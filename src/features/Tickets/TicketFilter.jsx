@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function TicketFilter() {
+  const { t } = useTranslation();
   const [status, setStatus] = useState("Todos");
   const filters = ["Todas", "Urgente", "Alta", "Médio", "Baixa"];
 
   return (
     <div className="mx-4 my-6">
       <div className="flex flex-row gap-4 items-center">
-        <p>Prioridade: </p>
+        <p>{t("tickets.filterPriority")} </p>
         <div className="flex flex-wrap gap-2">
           {filters.map((filter) => (
             <button

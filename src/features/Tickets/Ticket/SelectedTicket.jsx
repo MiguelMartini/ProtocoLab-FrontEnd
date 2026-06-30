@@ -4,14 +4,16 @@ import SelectedTicketHeader from "./SelectedTicketHeader";
 import TicketComments from "./TicketComments";
 import TicketSidebar from "./TicketSidebar";
 import VoltarBtn from "@/components/VoltarBtn";
+import { useTranslation } from "react-i18next";
 
 function SelectedTicket() {
+  const { t } = useTranslation();
   const { id } = useParams();
 
   const ticket = tickets.find((t) => t.id === Number(id));
 
   if (!ticket) {
-    return <h1>Ticket não encontrado</h1>;
+    return <h1>{t("selectedTicket.notFound")}</h1>
   }
 
   return (

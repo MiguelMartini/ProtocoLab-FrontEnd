@@ -1,9 +1,10 @@
 import DeleteBtn from "@/components/DeleteBtn";
 import { useEffect, useState } from "react";
-
+import { useTranslation } from "react-i18next";
 
 function DepartmentModal({ user, isOpen, onClose }) {
-    const [form, setForm] = useState({
+  const { t } = useTranslation();
+  const [form, setForm] = useState({
     name: "",
     description: "",
   });
@@ -37,42 +38,40 @@ function DepartmentModal({ user, isOpen, onClose }) {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/40">
       <div className="w-[500px] rounded-xl bg-white p-6">
-        <h2 className="mb-5 text-xl font-bold">
-          Editar departamento
-        </h2>
+        <h2 className="mb-5 text-xl font-bold">{t("department.editHeader")}</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col gap-2">
-            <span className="text-md text-gray-500">
-              Nome do departamento:
-            </span>
+            <span className="text-md text-gray-500">{t("department.editName")}</span>
 
             <input
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Nome"
+              placeholder={t("department.editNamePh")}
               className="w-full rounded-xl border border-gray-200 bg-gray-50 p-3 outline-none transition focus:border-indigo-500 focus:bg-white"
             />
           </div>
 
           <div className="flex flex-col gap-2">
-            <span className="text-md text-gray-500">
-              Descrição:
-            </span>
+            <span className="text-md text-gray-500">{t("department.editDesc")}</span>
 
             <textarea
               name="description"
               value={form.description}
               onChange={handleChange}
               rows={4}
-              placeholder="Descrição do departamento"
+              placeholder={t("department.editDescPh")}
               className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50 p-3 outline-none transition focus:border-indigo-500 focus:bg-white"
             />
           </div>
 
           <div className="flex justify-between">
-            <DeleteBtn msg={"Deseja excluir este departamento?"} alertMsg={"Esta ação não poderá ser desfeita."} onDelete={handleDelete} />
+            <DeleteBtn
+              msg={t("department.delHeader")}
+              alertMsg={t("department.delMsg")}
+              onDelete={handleDelete}
+            />
 
             <div className="flex gap-3">
               <button
@@ -80,21 +79,21 @@ function DepartmentModal({ user, isOpen, onClose }) {
                 onClick={onClose}
                 className="cursor-pointer rounded-lg border px-4 py-2"
               >
-                Cancelar
+                {t("department.cancelBtn")}
               </button>
 
               <button
                 type="submit"
                 className="cursor-pointer rounded-lg bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700"
               >
-                Salvar
+                {t("department.saveBtn")}
               </button>
             </div>
           </div>
         </form>
       </div>
     </div>
-  )
+  );
 }
 
-export default DepartmentModal
+export default DepartmentModal;

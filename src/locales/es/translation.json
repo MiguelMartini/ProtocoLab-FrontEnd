@@ -1,0 +1,126 @@
+{
+  "backBtn":{"backBtn": "Volver"},
+  "deleteBtn":{
+    "cancelBtn": "Cancelar",
+    "delBtn": "Borrar"
+  }, 
+  "dashboard": {
+  "sidebar": "Resumen",
+  "title": "Panel",
+  "greeting": "Hola,",
+  "subtitle": "Sigue tus tickets y actividades recientes.",
+  "cards": {
+    "tickets": {
+      "title": "Tickets",
+      "description": "Total de tickets"
+    },
+    "open": {
+      "title": "Abiertos",
+      "description": "Tickets abiertos"
+    }
+  },
+  "recentTickets": "Tickets recientes"
+},
+"selectedTicket": {
+  "notFound": "Ticket no encontrado",
+  "comments": "Comentarios:",
+
+  "inputComment": "Escribe un comentario...",
+  "emptyComment": "Aún no hay comentarios.",
+
+  "status": "Estado",
+  "priority": "Prioridad",
+  "responsible": "Responsable",
+  "department": "Departamento",
+
+  "openned": "Abierto por"
+},
+"tickets": {
+  "sidebar": "Tickets",
+  "headerMsg": "Todos los tickets de tu organización.",
+  "newTicketBtn": "Nuevo ticket",
+
+  "searchMsg": "Buscar por título o descripción...",
+
+  "filterPriority": "Prioridad: ",
+
+  "ticketsBtn": "Ver todos",
+
+  "newTicketHeader": "Crear ticket",
+  "newTicketMsg": "Crea un nuevo ticket.",
+
+  "title": "Título",
+  "titlePh": "Ej.: La computadora no enciende",
+  "desc": "Descripción",
+  "descPh": "Describe el problema detalladamente...",
+
+  "department": "Departamento",
+  "departmentPh": "Selecciona un departamento",
+
+  "priority": "Prioridad",
+  "prioritySel": "Selecciona una prioridad",
+
+  "option1": "Alta",
+  "option2": "Media",
+  "option3": "Baja",
+
+  "addBtn": "Abrir ticket"
+},
+"collaborator": {
+  "sidebar": "Colaboradores",
+  "headerMsg": "Administra todos los colaboradores de tu organización.",
+  "searchMsg": "Buscar colaborador...",
+  "searchBtn": "Buscar",
+  "newCollaboratorBtn": "Nuevo colaborador",
+
+  "newHeader": "Nuevo colaborador",
+  "newName": "Nombre:",
+  "newNamePh": "Nombre del colaborador",
+
+  "newEmail": "Correo electrónico:",
+  "newEmailPh": "Correo del colaborador",
+
+  "generatePass": "Generar contraseña:",
+  "generatePassPh": "generar contraseña",
+  "generatePassBtn": "Generar",
+
+  "role": "Cargo:",
+  "rolePlaceholder": "Ingrese el cargo",
+
+  "departmentSel": "Seleccionar departamento",
+
+  "addBtn": "Agregar"
+},
+  "department": {
+  "sidebar": "Departamentos",
+  "headerMsg": "Departamentos de la organización.",
+  "namePlaceHolder": "Nombre del departamento",
+  "descPlaceHolder": "Descripción del departamento",
+  "addBtn": "Agregar",
+
+  "editHeader": "Editar departamento",
+  "editName": "Nombre del departamento",
+  "editNamePh": "Nombre",
+  "editDesc": "Descripción",
+  "editDescPh": "Descripción del departamento",
+  "cancelBtn": "Cancelar",
+  "saveBtn": "Guardar",
+
+  "delHeader": "¿Desea eliminar este departamento?",
+  "delMsg": "Esta acción no se podrá deshacer."
+},
+  "team": {
+    "sidebar": "Equipo",
+    "headerMsg": "Miembros de su organización."
+  },
+  "settings": {
+    "sidebar": "Configuración",
+    "headerMsg": "Administra tu perfil",
+    "title": "Mi perfil",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "role": "Cargo",
+    "rolePlaceholder": "Ej.: Analista de TI",
+    "saveProfile": "Guardar perfil"
+  }
+}

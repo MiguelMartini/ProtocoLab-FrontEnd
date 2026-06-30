@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import TicketsCard from "../Tickets/TicketsCard"
 
 const tickets = [
@@ -31,9 +32,10 @@ const tickets = [
 ];
 
 function TicketComponent() {
+  const { t } = useTranslation();
   return (
     <div className="max-w-6xl mx-auto pt-8"> 
-      <TicketsCard title={"Chamados recentes"} tickets={tickets}/>
+      <TicketsCard title={t("dashboard.recentTickets")} tickets={tickets}/>
     </div>
   )
 }

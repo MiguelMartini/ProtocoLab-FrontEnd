@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import Select from "./Select";
 import DeleteBtn from "@/components/DeleteBtn";
+import { useTranslation } from "react-i18next";
 
 function CollaboratorModal({ user, isOpen, onClose }) {
+  const { t } = useTranslation();
   const [form, setForm] = useState({
     name: "",
     email: "",

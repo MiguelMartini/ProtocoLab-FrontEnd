@@ -13,8 +13,11 @@ import SidebarItem from "./SidebarItem";
 import SidebarHeader from "./SidebarHeader";
 import { useState } from "react";
 import NewTicketBtn from "../NewTicketBtn";
+import { useTranslation } from "react-i18next";
 
 function Sidebar() {
+  const { t } = useTranslation();
+
   const [open, setOpen] = useState(false);
 
   return (
@@ -61,27 +64,27 @@ function Sidebar() {
 
         <nav className="flex-1 px-4 space-y-2">
           <SidebarItem to="/dashboard" icon={LayoutGrid}>
-            Visão geral
+            {t("dashboard.sidebar")}
           </SidebarItem>
 
           <SidebarItem to="/tickets" icon={Ticket}>
-            Chamados
+            {t("tickets.sidebar")}
           </SidebarItem>
 
           <SidebarItem to="/collaborators" icon={UserPlus}>
-            Colaboradores
+            {t("collaborator.sidebar")}
           </SidebarItem>
 
           <SidebarItem to="/department" icon={Users}>
-            Departamentos
+            {t("department.sidebar")}
           </SidebarItem>
 
           <SidebarItem to="/team" icon={Users}>
-            Equipe
+            {t("team.sidebar")}
           </SidebarItem>
 
           <SidebarItem to="/settings" icon={Settings}>
-            Configurações
+            {t("settings.sidebar")}
           </SidebarItem>
         </nav>
 
