@@ -1,43 +1,30 @@
 import { useTranslation } from "react-i18next";
-import TicketsCard from "../Tickets/TicketsCard"
-
-const tickets = [
-  {
-    id: 1,
-    title: "Compra de equipamento",
-    author: "Miguel",
-    createdAt: "há 1 min",
-    priority: "Média",
-    status: "Aberto",
-    date: "14 de jun. de 2026",
-  },
-  {
-    id: 2,
-    title: "Pedido de compra",
-    author: "Renato",
-    createdAt: "há 24 min",
-    priority: "Baixa",
-    status: "Fechado",
-    date: "09 de jun. de 2026",
-  },
-  {
-    id: 3,
-    title: "Teste",
-    author: "Carol",
-    createdAt: "há 30 min",
-    priority: "Alta",
-    status: "Progresso",
-    date: "14 de jun. de 2026",
-  },
-];
+import TicketsCard from "../Tickets/TicketsCard";
+import { useEffect, useState } from "react";
+import { getTickets } from "@/api/tickets.api";
 
 function TicketComponent() {
+  const [tickets, setTickets] = useState([]);
+
+  useEffect(() => {
+    async function loadTickets() {
+      try {
+        const data = await getTickets();
+        setTickets(data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    loadTickets();
+  }, []);
+
   const { t } = useTranslation();
   return (
-    <div className="max-w-6xl mx-auto pt-8"> 
-      <TicketsCard title={t("dashboard.recentTickets")} tickets={tickets}/>
+    <div className="max-w-6xl mx-auto pt-8">
+      <TicketsCard title={t("dashboard.recentTickets")} tickets={tickets} />
     </div>
-  )
+  );
 }
 
-export default TicketComponent
+export default TicketComponent;

@@ -1,26 +1,28 @@
 import TicketPriority from "./TicketPriority";
 import TicketStatus from "./TicketStatus";
+import { formatDate } from "@/utils/formatDate";
 
-function TicketItem({ title, author, createdAt, priority, status, date, onClick}) {
+function TicketItem({ ticket, onClick}) {
+  console.log({...ticket})
   return (
      <div className="flex items-center justify-between p-5 border-b border-slate-200 cursor-pointer hover:bg-gray-100 " onClick={onClick}>
       <div>
         <h3 className="font-medium text-lg">
-          {title}
+          {ticket.title}
         </h3>
 
         <p className="text-slate-500 text-sm">
-          {author} · {createdAt}
+          {ticket.owner.name}
         </p>
       </div>
 
       <div className="flex items-center gap-4">
-        <TicketPriority priority={priority} />
+        <TicketPriority priority={ticket.priority} />
 
-        <TicketStatus status={status} />
+        <TicketStatus status={ticket.status} />
 
         <span className="text-slate-500 text-sm text-right w-28">
-          {date}
+          {formatDate(ticket.opening)}
         </span>
       </div>
     </div>

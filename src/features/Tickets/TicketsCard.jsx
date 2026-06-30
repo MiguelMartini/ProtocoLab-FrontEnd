@@ -25,6 +25,7 @@ function TicketsCard({ title, tickets }) {
       {tickets.map((ticket) => (
         <TicketItem
           onClick={() => navigate(`/ticket/${ticket.id}`)}
+          ticket={ticket}
           key={ticket.id}
           {...ticket}
         />
