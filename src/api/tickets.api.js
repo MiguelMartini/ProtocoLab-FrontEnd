@@ -10,6 +10,11 @@ export const getTicketId = async (id) => {
   return response.data;
 };
 
+export const postTicket = async (ticket) => {
+  const response = await api.post(`/tickets`, ticket);
+  return response.data;
+};
+
 // export const createDepartment = async (data) => {
 //   const response = await api.post("/departments", data);
 //   return response.data;

@@ -3,7 +3,7 @@ import TicketStatus from "./TicketStatus";
 import { formatDate } from "@/utils/formatDate";
 
 function TicketItem({ ticket, onClick}) {
-  console.log({...ticket})
+
   return (
      <div className="flex items-center justify-between p-5 border-b border-slate-200 cursor-pointer hover:bg-gray-100 " onClick={onClick}>
       <div>

@@ -7,7 +7,7 @@ function TicketSelect({ label, value, options }) {
 
       <select
         className="w-full rounded-xl border p-3"
-        defaultValue={value}
+        value={value}
       >
         {options.map((option) => (
           <option className="rounded-xl" key={option.id} value={option.nome}>

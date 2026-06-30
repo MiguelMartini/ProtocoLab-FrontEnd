@@ -1,11 +1,16 @@
+import TicketPriority from "../TicketPriority";
 import TicketStatus from "../TicketStatus";
 
 function SelectedTicketHeader({ ticket }) {
+
   return (
     <div className="rounded-2xl border bg-white p-6 shadow-sm">
-      <div className="flex justify-between">
+      <div className="flex justify-start gap-3">
         <div className="flex gap-2">
           <TicketStatus status={ticket.status} />
+        </div>
+        <div className="flex gap-2">
+          <TicketPriority priority={ticket.priority} />
         </div>
       </div>
 

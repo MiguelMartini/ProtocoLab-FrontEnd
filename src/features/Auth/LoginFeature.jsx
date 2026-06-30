@@ -31,8 +31,6 @@ function LoginFeature() {
   try {
     const data = await login(form);
 
-    console.log("Login realizado!");
-    console.log(data);
     setToken(data.accessToken);
     setUser(data.user);
     setAuthToken(data.accessToken);
