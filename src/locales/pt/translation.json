@@ -5,6 +5,7 @@
     "delBtn": "Excluir"
   },
   "dashboard": {
+    "sidebar": "Visão geral",
     "title": "Dashboard",
     "greeting": "Olá,",
     "subtitle": "Acompanhe seus chamados e atividades recentes.",
@@ -17,7 +18,8 @@
         "title": "Abertos",
         "description": "Chamados abertos"
       }
-    }
+    },
+    "recentTickets": "Chamados recentes"
   },
   "selectedTicket":{
     "notFound": "Ticket não encontrado",

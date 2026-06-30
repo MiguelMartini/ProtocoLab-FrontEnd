@@ -5,19 +5,21 @@
     "delBtn": "Delete"
   }, 
   "dashboard": {
-    "title": "Dashboard",
-    "greeting": "Hello,",
-    "subtitle": "Track your tickets and recent activities.",
-    "cards": {
-      "tickets": {
-        "title": "Tickets",
-        "description": "Total tickets"
-      },
-      "open": {
-        "title": "Open",
-        "description": "Open tickets"
-      }
+  "sidebar": "Overview",
+  "title": "Dashboard",
+  "greeting": "Hello,",
+  "subtitle": "Track your tickets and recent activities.",
+  "cards": {
+    "tickets": {
+      "title": "Tickets",
+      "description": "Total tickets"
+    },
+    "open": {
+      "title": "Open",
+      "description": "Open tickets"
     }
+  },
+  "recentTickets": "Recent tickets"
 },
 "selectedTicket": {
   "notFound": "Ticket not found",

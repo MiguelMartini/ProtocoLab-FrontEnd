@@ -5,19 +5,21 @@
     "delBtn": "Borrar"
   }, 
   "dashboard": {
-    "title": "Panel",
-    "greeting": "Hola,",
-    "subtitle": "Sigue tus tickets y actividades recientes.",
-    "cards": {
-      "tickets": {
-        "title": "Tickets",
-        "description": "Total de tickets"
-      },
-      "open": {
-        "title": "Abiertos",
-        "description": "Tickets abiertos"
-      }
+  "sidebar": "Resumen",
+  "title": "Panel",
+  "greeting": "Hola,",
+  "subtitle": "Sigue tus tickets y actividades recientes.",
+  "cards": {
+    "tickets": {
+      "title": "Tickets",
+      "description": "Total de tickets"
+    },
+    "open": {
+      "title": "Abiertos",
+      "description": "Tickets abiertos"
     }
+  },
+  "recentTickets": "Tickets recientes"
 },
 "selectedTicket": {
   "notFound": "Ticket no encontrado",

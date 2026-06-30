@@ -64,7 +64,7 @@ function Sidebar() {
 
         <nav className="flex-1 px-4 space-y-2">
           <SidebarItem to="/dashboard" icon={LayoutGrid}>
-            Visão geral
+            {t("dashboard.sidebar")}
           </SidebarItem>
 
           <SidebarItem to="/tickets" icon={Ticket}>
