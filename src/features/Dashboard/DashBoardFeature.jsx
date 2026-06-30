@@ -1,10 +1,12 @@
 import TicketFeature from "./TicketComponent";
 import DashBoardCard from "./DashBoardCard";
 import { useTranslation } from "react-i18next";
+import { useAuth } from "@/hooks/useAuth";
 
 function DashBoardFeature() {
   const { t } = useTranslation();
-  
+  const { user } = useAuth();
+
   return (
     <div className="px-20 pt-10 max-w-7xl mx-auto">
       <div className="mb-8">
@@ -15,7 +17,7 @@ function DashBoardFeature() {
         <div className="mt-2">
           <h2 className="text-2xl text-slate-600">
             {t("dashboard.greeting")}{" "}
-            <span className="font-bold text-[#4F39F6]">User</span>
+            <span className="font-bold text-[#4F39F6]">{user?.name}</span>
           </h2>
 
           <p className="text-md text-slate-500 mt-1">

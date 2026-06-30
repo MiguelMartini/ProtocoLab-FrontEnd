@@ -11,6 +11,7 @@ import Collaborators from "@/pages/Collaborators";
 import SelectedTicket from "@/features/Tickets/Ticket/SelectedTicket";
 import StoreCollaborator from "@/features/Collaborators/CRUD/StoreCollaborator/StoreCollaborator";
 import TicketStoreFeature from "@/features/Tickets/TicketStore/TicketStoreFeature";
+import PrivateRoute from "./privateRoute";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,11 @@ const router = createBrowserRouter([
     element: <Register />,
   },
   {
-    element: <DashboardLayout/>,
+    element: (
+      <PrivateRoute>
+        <DashboardLayout />
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "/dashboard",
@@ -59,8 +64,8 @@ const router = createBrowserRouter([
       {
         path: "/settings",
         element: <UserSettings />,
-      }
-    ]
+      },
+    ],
   },
 ]);
 
