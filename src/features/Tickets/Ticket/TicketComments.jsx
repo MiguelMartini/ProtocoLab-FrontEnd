@@ -2,9 +2,9 @@ import { useTranslation } from "react-i18next";
 import Comment from "./Comment";
 import CommentInput from "./CommentInput";
 
-import { comments } from "@/mocks/comments";
+// import { comments } from "@/mocks/comments";
 
-function TicketComments() {
+function TicketComments({comments}) {
   const { t } = useTranslation();
   return (
     <div className="rounded-2xl border bg-white shadow-sm">

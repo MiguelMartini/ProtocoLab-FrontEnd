@@ -22,7 +22,6 @@ function Sidebar() {
 
   return (
     <div>
-      {/* Botão Mobile */}
       <button
         onClick={() => setOpen(true)}
         className="md:hidden fixed top-4 left-4 z-50"
@@ -30,7 +29,6 @@ function Sidebar() {
         <Menu />
       </button>
 
-      {/* Overlay */}
       {open && (
         <div
           className="fixed inset-0 bg-black/40 z-40 md:hidden"
@@ -40,8 +38,8 @@ function Sidebar() {
 
       <aside
         className={`
-            fixed md:static
-            top-0 left-0
+            fixed md:sticky md:top-0 /* Alterado de md:static para garantir que fique fixo na tela ao scrollar a página */
+            left-0
             h-screen w-72
             bg-white
             border-r border-slate-200
@@ -60,9 +58,9 @@ function Sidebar() {
         </button>
         <SidebarHeader />
 
-        <NewTicketBtn/>
+        <NewTicketBtn />
 
-        <nav className="flex-1 px-4 space-y-2">
+        <nav className="flex-1 px-4 space-y-2 overflow-y-auto">
           <SidebarItem to="/dashboard" icon={LayoutGrid}>
             {t("dashboard.sidebar")}
           </SidebarItem>
