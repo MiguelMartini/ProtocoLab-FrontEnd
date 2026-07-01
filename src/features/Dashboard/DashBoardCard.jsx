@@ -4,7 +4,7 @@ function DashBoardCard({ title, icon, description, total }) {
   return (
     <div
       className="
-      w-70
+      w-65
       h-30
       bg-white
       border border-slate-200
