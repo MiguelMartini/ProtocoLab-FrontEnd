@@ -6,6 +6,7 @@ import { useState } from "react";
 import { login } from "@/api/auth.api";
 import { useAuth } from "@/hooks/useAuth";
 import { setAuthToken } from "@/api/axios";
+import { toast } from "sonner";
 
 function LoginFeature() {
   const { t } = useTranslation();
@@ -39,7 +40,8 @@ function LoginFeature() {
     navigate("/dashboard");
 
   } catch (error) {
-    console.error(error.response?.data?.message || "Erro ao fazer login");
+    toast.error("Erro ao fazer login");
+    console.error(error.response?.data?.message);
   }
 }
 
