@@ -5,3 +5,8 @@ export const getCollaborators = async () => {
 
   return response.data;
 };
+
+export const createCollaborator = async (data) => {
+  const response = await api.post("/users", data);
+  return response.data;
+};

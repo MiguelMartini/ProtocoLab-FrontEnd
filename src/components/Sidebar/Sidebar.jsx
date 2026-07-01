@@ -14,11 +14,15 @@ import SidebarHeader from "./SidebarHeader";
 import { useState } from "react";
 import NewTicketBtn from "../NewTicketBtn";
 import { useTranslation } from "react-i18next";
+import { useAuth } from "@/hooks/useAuth";
 
 function Sidebar() {
   const { t } = useTranslation();
+  const { user } = useAuth();
 
   const [open, setOpen] = useState(false);
+
+  const canManage = user?.role === "ADMIN" || user?.role === "MANAGER";
 
   return (
     <div>
@@ -69,13 +73,17 @@ function Sidebar() {
             {t("tickets.sidebar")}
           </SidebarItem>
 
-          <SidebarItem to="/collaborators" icon={UserPlus}>
-            {t("collaborator.sidebar")}
-          </SidebarItem>
+          {canManage && (
+            <>
+              <SidebarItem to="/collaborators" icon={UserPlus}>
+                {t("collaborator.sidebar")}
+              </SidebarItem>
 
-          <SidebarItem to="/department" icon={Users}>
-            {t("department.sidebar")}
-          </SidebarItem>
+              <SidebarItem to="/department" icon={Users}>
+                {t("department.sidebar")}
+              </SidebarItem>
+            </>
+          )}
 
           <SidebarItem to="/team" icon={Users}>
             {t("team.sidebar")}
