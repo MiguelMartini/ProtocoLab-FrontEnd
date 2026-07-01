@@ -1,5 +1,4 @@
-
-function CollaboratorCard({ user, onClick }) {
+function CollaboratorCard({ collaborator, onClick }) {
   return (
     <div
       onClick={onClick}
@@ -7,24 +6,26 @@ function CollaboratorCard({ user, onClick }) {
     >
       <div className="flex items-center gap-4">
         <div className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 font-semibold text-indigo-700">
-          {user.name.charAt(0)}
+          {collaborator.name.charAt(0)}
         </div>
 
         <div>
-          <h3 className="font-semibold">{user.name}</h3>
-          <p className="text-gray-500">{user.email}</p>
+          <h3 className="font-semibold">{collaborator.name}</h3>
+          <p className="text-gray-500">{collaborator.email}</p>
         </div>
       </div>
 
       <div className="text-right">
         <div className="bg-indigo-600 rounded-md p-1">
-          <p className="text-white flex justify-center p-1 text-sm">{user.departamento}</p>
+          <p className="text-white flex justify-center p-1 text-sm">
+            {collaborator.department?.name}
+          </p>
         </div>
 
-        <p>{user.cargo}</p>
+        <p>{collaborator.role}</p>
       </div>
     </div>
-  )
+  );
 }
 
-export default CollaboratorCard
+export default CollaboratorCard;

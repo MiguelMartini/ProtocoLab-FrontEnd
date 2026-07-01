@@ -1,19 +1,54 @@
 import { PencilRuler, Plus } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Select from "../../Components/Select";
 
 import { gerarSenha } from "../../../../utils/generatePassword";
 import { useTranslation } from "react-i18next";
+import { getDepartments } from "@/api/department.api";
+import { createCollaborator } from "@/api/collaborator.api";
 
 function StoreCollaboratorFeature() {
   const { t } = useTranslation();
-  const [password, setPassword] = useState("");
-  
-  const statusOptions = [
-    { id: 1, nome: "TI" },
-    { id: 2, nome: "Compras" },
-    { id: 3, nome: "Gerencia" },
-  ];
+  const [departments, setDepartments] = useState([]);
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    password: "",
+    role: "",
+    departmentId: "",
+  });
+
+  useEffect(() => {
+    async function loadDepartments() {
+      try {
+        const data = await getDepartments();
+        setDepartments(data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    loadDepartments();
+  }, []);
+
+  const handleCreate = async () => {
+    try {
+      await createCollaborator(form);
+
+      alert("Colaborador criado!");
+
+      setForm({
+        name: "",
+        email: "",
+        password: "",
+        role: "",
+        departmentId: "",
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div className="w-full rounded-2xl border border-gray-200 bg-white  p-6 shadow-sm">
@@ -24,32 +59,48 @@ function StoreCollaboratorFeature() {
       <div className="space-y-4">
         <div className="flex flex-col gap-3 mt-10">
           <div className="flex flex-col gap-3 md:flex-col mb-2">
-            <span className="text-md text-gray-500">{t("collaborator.newName")}</span>
+            <span className="text-md text-gray-500">
+              {t("collaborator.newName")}
+            </span>
             <input
               type="text"
+              value={form.name}
+              onChange={(e) => setForm({ ...form, name: e.target.value })}
               placeholder={t("collaborator.newNamePh")}
               className="w-full rounded-xl border border-gray-200 bg-gray-50 p-3 outline-none transition focus:border-blue-500 focus:bg-white"
             />
-            <span className="text-md text-gray-500">{t("collaborator.newEmail")}</span>
+            <span className="text-md text-gray-500">
+              {t("collaborator.newEmail")}
+            </span>
             <input
               type="text"
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
               placeholder={t("collaborator.newEmailPh")}
               className="w-full rounded-xl border border-gray-200 bg-gray-50 p-3 outline-none transition focus:border-blue-500 focus:bg-white"
             />
             <div className="flex flex-col">
-              <span className="text-md text-gray-500">{t("collaborator.generatePass")}</span>
+              <span className="text-md text-gray-500">
+                {t("collaborator.generatePass")}
+              </span>
               <div className="flex gap-4">
                 <input
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  value={form.password}
                   readOnly
                   type="text"
                   placeholder={t("collaborator.generatePassPh")}
                   className="w-full rounded-xl border border-gray-200 bg-gray-50 p-3 outline-none transition focus:border-blue-500 focus:bg-white"
                 />
+
                 <button
+                  type="button"
                   className="flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 font-medium text-white transition hover:bg-indigo-700 md:w-fit cursor-pointer"
-                  onClick={() => setPassword(gerarSenha())}
+                  onClick={() =>
+                    setForm((prev) => ({
+                      ...prev,
+                      password: gerarSenha(),
+                    }))
+                  }
                 >
                   <PencilRuler size={18} />
                   {t("collaborator.generatePassBtn")}
@@ -64,6 +115,8 @@ function StoreCollaboratorFeature() {
 
                 <input
                   type="text"
+                  value={form.role}
+                  onChange={(e) => setForm({ ...form, role: e.target.value })}
                   placeholder={t("collaborator.rolePlaceholder")}
                   className="w-full rounded-xl border border-gray-200 bg-gray-50 p-3 outline-none transition focus:border-blue-500 focus:bg-white"
                 />
@@ -71,13 +124,25 @@ function StoreCollaboratorFeature() {
 
               <Select
                 label={t("collaborator.departmentSel")}
-                value={t("collaborator.departmentSel")}
-                options={statusOptions}
+                value={form.departmentId}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    departmentId: Number(e.target.value),
+                  })
+                }
+                options={departments.map((dep) => ({
+                  id: dep.id,
+                  nome: dep.name,
+                }))}
               />
             </div>
           </div>
 
-          <button className="flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 font-medium text-white transition hover:bg-indigo-700 md:w-fit cursor-pointer">
+          <button
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-6 py-3 font-medium text-white transition hover:bg-indigo-700 md:w-fit cursor-pointer"
+            onClick={handleCreate}
+          >
             <Plus size={18} />
             {t("collaborator.addBtn")}
           </button>
