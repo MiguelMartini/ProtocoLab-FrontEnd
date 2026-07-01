@@ -16,27 +16,26 @@ function SelectedTicket() {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
-  async function loadData() {
-    try {
-      const [ticketData, commentsData] = await Promise.all([
-        getTicketId(id),
-        getComments(id),
-      ]);
+    async function loadData() {
+      try {
+        const [ticketData, commentsData] = await Promise.all([
+          getTicketId(id),
+          getComments(id),
+        ]);
 
-      setTicket(ticketData);
-      setComments(commentsData);
-    } catch (error) {
-      console.error(error);
+        setTicket(ticketData);
+        setComments(commentsData);
+      } catch (error) {
+        console.error(error);
+      }
     }
-  }
 
-  loadData();
-}, [id]);
+    loadData();
+  }, [id]);
 
   if (!ticket) {
     return <h1>{t("selectedTicket.notFound")}</h1>;
   }
-
 
   return (
     <div className="px-20 pt-10 max-w-7xl mx-auto">
@@ -46,8 +45,13 @@ function SelectedTicket() {
         <div className="col-span-8 space-y-6">
           <SelectedTicketHeader ticket={ticket} />
 
-          <TicketComments comments={comments}/>
-
+          <TicketComments
+            comments={comments}
+            ticketId={id}
+            onCommentAdded={(comment) =>
+              setComments((prev) => [...prev, comment])
+            }
+          />
         </div>
         <div className="col-span-4">
           <TicketSidebar ticket={ticket} />
