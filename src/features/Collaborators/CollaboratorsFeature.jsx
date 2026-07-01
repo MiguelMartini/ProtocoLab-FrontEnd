@@ -41,9 +41,21 @@ function CollaboratorsFeature() {
     loadData();
   }, []);
 
-    
-// console.log(collaborators)
-// console.log(departments)
+    function handleUpdateCollaborator(updatedCollaborator) {
+  setCollaborators((prev) =>
+    prev.map((collaborator) =>
+      collaborator.id === updatedCollaborator.id
+        ? {
+            ...collaborator,
+            ...updatedCollaborator,
+          }
+        : collaborator
+    )
+  );
+
+  setSelectedUser(updatedCollaborator);
+}
+
   function handleOpenModal(user) {
     setSelectedUser(user);
   }
@@ -71,6 +83,7 @@ function CollaboratorsFeature() {
         user={selectedUser}
         isOpen={!!selectedUser}
         onClose={handleCloseModal}
+        onUpdate={handleUpdateCollaborator}
       />
     </div>
   )

@@ -1,20 +1,25 @@
 import { useEffect, useState } from "react";
 import Select from "./Select";
 import DeleteBtn from "@/components/DeleteBtn";
-import { useTranslation } from "react-i18next";
+import { editUser } from "@/api/user.api";
+import { toast } from "sonner";
 
-function CollaboratorModal({ user, isOpen, onClose }) {
-  const { t } = useTranslation();
+function CollaboratorModal({ user, isOpen, onClose, onUpdate }) {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    cargo: "",
-    departamento: "",
+    role: "",
+    departmentId: "",
   });
 
   useEffect(() => {
     if (user) {
-      setForm(user);
+      setForm({
+        name: user.name || "",
+        email: user.email || "",
+        role: user.role || "",
+        departmentId: user.departmentId || "",
+      });
     }
   }, [user]);
 
@@ -27,12 +32,19 @@ function CollaboratorModal({ user, isOpen, onClose }) {
     });
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
-    console.log(form);
+    try {
+      const updatedUser = await editUser(user.id, form);
 
-    onClose();
+      onUpdate(updatedUser);
+
+      onClose();
+    } catch (error) {
+      toast.error("Erro. o Nome deve conter apenas espaços e letras")
+      console.error(error);
+    }
   }
   const statusOptions = [
     { id: 1, nome: "TI" },
@@ -72,8 +84,8 @@ function CollaboratorModal({ user, isOpen, onClose }) {
           <div className="flex flex-col gap-2">
             <span className="text-md text-gray-500">Cargo:</span>
             <input
-              name="cargo"
-              value={form.cargo}
+              name="role"
+              value={form.role}
               onChange={handleChange}
               className="w-full rounded-xl border border-gray-200 bg-gray-50 p-3 outline-none transition focus:border-blue-500 focus:bg-white"
               placeholder="Cargo"
@@ -81,13 +93,19 @@ function CollaboratorModal({ user, isOpen, onClose }) {
           </div>
           <div className="flex flex-col gap-2">
             <Select
-              label="Selecionar Departamento"
-              value="Selecionar Departamento"
-              options={statusOptions}
-            />
+  label="Selecionar Departamento"
+  name="departmentId"
+  value={form.departmentId}
+  options={statusOptions}
+  onChange={handleChange}
+/>
           </div>
           <div className="flex justify-between">
-            <DeleteBtn msg={"Deseja excluir este colaborador?"} alertMsg={"Esta ação não poderá ser desfeita."} onDelete={() => handleDelete()} />
+            <DeleteBtn
+              msg={"Deseja excluir este colaborador?"}
+              alertMsg={"Esta ação não poderá ser desfeita."}
+              onDelete={() => handleDelete()}
+            />
             <div className="flex justify-end gap-3">
               <button
                 type="button"
